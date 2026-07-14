@@ -6,6 +6,7 @@ export interface NavLink {
 export interface JourneyItem {
   title: string;
   description: string;
+  period?: string;
 }
 
 export interface CodeToken {
@@ -59,6 +60,7 @@ export interface Project {
   tag: "LIVE" | "IN DEVELOPMENT";
   featured?: boolean;
   monogram: string;
+  thumbnail?: string;
   homeBadges: string[];
   summary: string;
   overview: string[];
@@ -101,10 +103,11 @@ export const site = {
   ] as NavLink[],
 
   hero: {
-    eyebrow: "Developer, Poland · open to internships & collaboration",
+    eyebrow:
+      "Developer, Poland · starting university (IT) in October · open to internships",
     headline: ["Frontend-leaning developer,", "shipping full products."],
     paragraph:
-      "I design and build real, working software — from marketing sites to a database-backed admin dashboard with authentication. Self-taught, still in school, and measuring progress in commits and shipped features rather than job titles.",
+      "I design and build real, working software — from marketing sites to a database-backed admin dashboard with authentication. Self-taught, measuring progress in commits and shipped features rather than job titles, and starting university this October to study IT.",
     stats: [
       { value: "1,141", label: "contributions / yr" },
       { value: "4", label: "shipped projects" },
@@ -136,7 +139,7 @@ export const site = {
     paragraphs: [
       "I'm Alex — a developer from Poland just finished technical secondary school with a programming specialization, where I passed both national IT certification exams (INF.03, INF.04) alongside my Matura finals.",
       "Outside of school, I taught myself React, TypeScript and Python by building things people could actually use: an agency website, a restaurant ordering mockup, and — my most involved build so far — a car-service admin dashboard with authentication and a full relational database behind it.",
-      "I want to keep studying - ideally at university level - while continuing to grow as a developer. I'm open to internships, part-time work, and any collaboration that lets me keep building real things alongside that.",
+      "I'm starting university this October to study IT, and I'm looking for an internship or collaboration to run alongside it — anything that lets me keep building real things while I study.",
     ],
     journeyLabel: "Journey so far",
     journey: [
@@ -147,6 +150,7 @@ export const site = {
       },
       {
         title: "Technical secondary school — Programming",
+        period: "2021 – 2026",
         description:
           "Passed INF.03 and INF.04 certification exams (programmer technician), plus strong Matura results (Math 92%, English 97%).",
       },
@@ -159,6 +163,12 @@ export const site = {
         title: "Team Poland — MOS 2026",
         description:
           "Selected to represent Poland at the Microsoft Office Specialist World Championship (held in the US), Excel category — backed by multiple Excel Expert certification passes.",
+      },
+      {
+        title: "Starting university — IT",
+        period: "October 2026",
+        description:
+          "Beginning IT studies at university while looking for an internship or collaboration to keep building real projects alongside coursework.",
       },
     ] as JourneyItem[],
   },
@@ -302,7 +312,7 @@ export const site = {
     sectionLabel: "04 — Beyond the code",
     heading: "I run a small web agency — AD.digital.",
     paragraph:
-      "Alongside school and my own projects, I design and build complete web presences for local businesses around Goleniów, Szczecin, Stargard and Nowogard — restaurants, insurance agencies, car services, furniture makers. I handle the whole process myself, end to end.",
+      "Alongside university and my own projects, I design and build complete web presences for local businesses around Szczecin - restaurants, insurance agencies, car services, furniture makers. I handle the whole process myself, end to end.",
     ctaLabel: "Visit AD.digital",
     ctaUrl: "https://addigital.vercel.app/",
     services: [
@@ -411,6 +421,7 @@ export const site = {
         name: "AD.digital",
         tag: "LIVE",
         monogram: "AD",
+        thumbnail: "/screenshots/addigital.jpg",
         homeBadges: ["Next.js", "Tailwind CSS", "Framer Motion"],
         summary:
           "The marketing site for my own small web agency — built for speed and conversion, with a portfolio grid, animated hero, and a quote-request flow for local businesses.",
@@ -453,6 +464,7 @@ export const site = {
         name: "Restaurant Mockup",
         tag: "LIVE",
         monogram: "RM",
+        thumbnail: "/screenshots/bistroburger.jpg",
         homeBadges: ["React", "Reservation UI", "Responsive Design"],
         summary:
           "A burger gastropub concept site — menu presentation and a table-reservation flow, designed to feel local, appetizing, and easy to book from.",
@@ -490,6 +502,7 @@ export const site = {
         name: "NordCar Service",
         tag: "LIVE",
         monogram: "NC",
+        thumbnail: "/screenshots/nordcar.jpg",
         homeBadges: ["React", "Tailwind CSS", "Business Site"],
         summary:
           "A business site mockup for a car service company — service listings, booking CTAs, and a clean, trust-building layout for a local audience.",

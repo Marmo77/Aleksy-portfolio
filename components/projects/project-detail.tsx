@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import type { Project } from "@/data/site";
@@ -71,20 +72,38 @@ export function ProjectDetail({
       </section>
 
       <Reveal className="mx-auto max-w-[1180px] px-6 pb-8">
-        <div className="diagonal-stripes relative flex aspect-[16/7.5] items-center justify-center overflow-hidden rounded-3xl border border-border bg-card-bg">
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(120% 140% at 15% 10%, var(--mint-soft) 0%, transparent 55%)",
-            }}
-          />
+        <div className="relative flex aspect-[16/7.5] items-center justify-center overflow-hidden rounded-3xl border border-border bg-card-bg">
+          {project.thumbnail ? (
+            <>
+              <Image
+                src={project.thumbnail}
+                alt={`${project.name} — screenshot`}
+                fill
+                sizes="100vw"
+                priority
+                className="object-cover object-top"
+              />
+              <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/35 to-transparent" />
+            </>
+          ) : (
+            <div className="diagonal-stripes absolute inset-0">
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "radial-gradient(120% 140% at 15% 10%, var(--mint-soft) 0%, transparent 55%)",
+                }}
+              />
+              <div className="font-display relative z-[1] flex h-full items-center justify-center">
+                <div className="flex h-[150px] w-[150px] items-center justify-center rounded-[32px] border border-border-strong bg-bg-soft text-[38px] font-bold text-text-dim">
+                  {project.monogram}
+                </div>
+              </div>
+            </div>
+          )}
           <Badge variant={tagVariant} className="absolute top-[22px] left-[22px] z-[2]">
             {project.tag}
           </Badge>
-          <div className="font-display relative z-[1] flex h-[150px] w-[150px] items-center justify-center rounded-[32px] border border-border-strong bg-bg-soft text-[38px] font-bold text-text-dim">
-            {project.monogram}
-          </div>
         </div>
       </Reveal>
 

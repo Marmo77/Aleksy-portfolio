@@ -28,11 +28,19 @@ export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const activeSection = useActiveSection(SECTION_IDS);
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-border bg-bg/70 backdrop-blur-xl transition-colors">
       <div className="mx-auto flex h-[68px] max-w-[1180px] items-center justify-between px-6">
         <Link
           href="/"
+          onClick={handleLogoClick}
           className="font-display text-lg font-bold tracking-tight"
         >
           {site.companyName.slice(0, -1)}
