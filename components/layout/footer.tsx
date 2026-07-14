@@ -20,12 +20,6 @@ export function Footer() {
           </span>
         </div>
       </div>
-      {/* <div className="flex justify-center items-end gap-1">
-        <p>Strona stworzona przez</p>
-        <span className="text-sm font-bold text-primary/80 cursor-pointer hover:underline underline-offset-3">
-          Addigital
-        </span>
-      </div> */}
     </footer>
   );
 }
