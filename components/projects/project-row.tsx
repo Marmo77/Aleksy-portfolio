@@ -27,18 +27,18 @@ export function ProjectRow({
         reverse && "md:flex-row-reverse",
       )}
     >
-      <div className="relative aspect-[4/3.15] w-full overflow-hidden rounded-[22px] border border-border bg-card-bg md:flex-[0_0_52%]">
+      <div className="relative aspect-[4/2.75] w-full overflow-hidden rounded-[22px] border border-border bg-card-bg md:flex-[0_0_52%]">
         {project.thumbnail ? (
-          <>
+          <Link className="group" href={`/projects/${project.slug}`}>
             <Image
               src={project.thumbnail}
               alt={`${project.name} — screenshot`}
               fill
               sizes="(min-width: 768px) 52vw, 100vw"
-              className="object-cover object-top"
+              className="object-center object-cover group-hover:scale-110 duration-500 ease-in-out transition-transform"
             />
             <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/35 to-transparent" />
-          </>
+          </Link>
         ) : (
           <div className="diagonal-stripes absolute inset-0">
             <div

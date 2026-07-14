@@ -23,7 +23,8 @@ export function HeroSection() {
               </span>
             </div>
             <h1 className="font-display text-[42px] leading-[1.03] font-bold tracking-tight sm:text-[56px] lg:text-[62px]">
-              {headlineStart} <span className="gradient-text">{headlineGradient}</span>
+              {headlineStart}{" "}
+              <span className="gradient-text">{headlineGradient}</span>
             </h1>
             <p className="mt-6 max-w-[520px] text-[17px] leading-relaxed text-text-muted">
               {hero.paragraph}

@@ -422,6 +422,7 @@ export const site = {
         tag: "LIVE",
         monogram: "AD",
         thumbnail: "/screenshots/addigital.jpg",
+        gif: "/gifs/addigital.gif",
         homeBadges: ["Next.js", "Tailwind CSS", "Framer Motion"],
         summary:
           "The marketing site for my own small web agency — built for speed and conversion, with a portfolio grid, animated hero, and a quote-request flow for local businesses.",
@@ -465,6 +466,7 @@ export const site = {
         tag: "LIVE",
         monogram: "RM",
         thumbnail: "/screenshots/bistroburger.jpg",
+        gif: "/gifs/bistroburger.gif",
         homeBadges: ["React", "Reservation UI", "Responsive Design"],
         summary:
           "A burger gastropub concept site — menu presentation and a table-reservation flow, designed to feel local, appetizing, and easy to book from.",
@@ -503,6 +505,7 @@ export const site = {
         tag: "LIVE",
         monogram: "NC",
         thumbnail: "/screenshots/nordcar.jpg",
+        gif: "/gifs/nordcar.gif",
         homeBadges: ["React", "Tailwind CSS", "Business Site"],
         summary:
           "A business site mockup for a car service company — service listings, booking CTAs, and a clean, trust-building layout for a local audience.",
