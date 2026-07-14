@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"D:\\\\prog\\\\2026-projekty\\\\ClaudeProjects\\\\adwizytowka-tmp\" && cat package.json && echo \"---\" && ls -la && echo \"---app---\" && ls -la app)",
+      "Read(//d/prog/2026-projekty/ClaudeProjects/**)",
+      "Bash(robocopy adwizytowka-tmp *)",
+      "Bash(echo \"exit code: $?\")",
+      "Bash(npm install *)",
+      "Bash(npx --yes shadcn@latest init -y -b neutral --force)",
+      "Bash(npx --yes shadcn@latest init -b radix -p nova -y --force)",
+      "Bash(npx --yes shadcn@latest add button badge card input textarea label form separator navigation-menu sheet tooltip -y --overwrite)",
+      "Bash(npx --yes shadcn@latest add form -y --overwrite)",
+      "Bash(npx --yes shadcn@latest add form)",
+      "Bash(npx --yes shadcn@latest diff form)"
+    ]
+  }
+}
