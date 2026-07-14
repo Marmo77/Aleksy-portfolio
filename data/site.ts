@@ -139,7 +139,7 @@ export const site = {
     heading: "Proof of work, not a résumé.",
     paragraphs: [
       "I'm Alex — a developer from Poland just finished technical secondary school with a programming specialization, where I passed both national IT certification exams (INF.03, INF.04) alongside my Matura finals.",
-      "Outside of school, I taught myself React, TypeScript and Python by building things people could actually use: an agency website, a restaurant ordering mockup, and — my most involved build so far — a car-service admin dashboard with authentication and a full relational database behind it.",
+      "Outside of school, I taught myself React, TypeScript and Python by building things people could actually use: an agency website, live sites for local businesses, and — my most involved build so far — a car-service admin dashboard with authentication and a full relational database behind it.",
       "I'm starting university this October to study IT, and I'm looking for an internship or collaboration to run alongside it — anything that lets me keep building real things while I study.",
     ],
     journeyLabel: "Journey so far",
@@ -367,7 +367,7 @@ export const site = {
         summary:
           "A fully hand-coded SaaS-style admin dashboard for a car service business — vehicle and booking CRUD, role-based OAuth login, and relational data modeling on Supabase Postgres. My deepest dive into auth, database logic, and access control so far.",
         overview: [
-          "Everything I'd built before this was frontend-heavy: a landing page, a mockup, a menu. This dashboard was the first time I had to design an actual data model — vehicles, services, bookings, and staff accounts — and make sure the UI, the database, and the auth layer all agreed with each other.",
+          "Everything I'd built before this was frontend-heavy: a landing page, a business site, a menu. This dashboard was the first time I had to design an actual data model — vehicles, services, bookings, and staff accounts — and make sure the UI, the database, and the auth layer all agreed with each other.",
           "It's a SaaS-style CRUD dashboard for a car service business: staff can log in, add and update vehicles, manage service records, and see everything in one admin view. It's still in active development, which I've left visible on purpose — it's a more honest picture of ongoing work than a project I only show once it's finished.",
         ],
         keyFeatures: [
@@ -429,9 +429,19 @@ export const site = {
           "The marketing site for my own small web agency — built for speed and conversion, with a portfolio grid, animated hero, and a quote-request flow for local businesses.",
         overview: [
           "I run a small web agency on the side, building sites for local businesses around Goleniów, Szczecin, Stargard and Nowogard. This is its own storefront — it has to load fast, read clearly on a phone, and turn a visit into a message within a few seconds of arriving.",
-          'It doubles as a portfolio in its own right: the "Realizations" section links out to real client sites, including the restaurant mockup and car-service site also shown on this page.',
+          'It doubles as a portfolio in its own right: the "Realizations" section links out to real client sites, including the restaurant and car-service builds also shown on this page.',
         ],
         keyFeatures: [
+          {
+            title: "~1.2s load, 95+ Lighthouse",
+            description:
+              "aggressive image optimization and a lean bundle keep the first paint fast on mobile networks.",
+          },
+          {
+            title: "Quote-request flow that converts",
+            description:
+              "a low-friction path from any section to a filled-out brief — the site's single most important job.",
+          },
           {
             title: "Animated hero and gradient system",
             description:
@@ -440,17 +450,17 @@ export const site = {
           {
             title: 'Portfolio / "Realizations" grid',
             description:
-              "showcases real client projects with results (e.g. reservation and lead-gen uplift).",
+              "showcases real client projects, linking straight out to the live sites.",
+          },
+          {
+            title: "SEO-conscious structure",
+            description:
+              "semantic HTML and metadata aimed at ranking for local search terms across four towns.",
           },
           {
             title: "Dark / light theme toggle",
             description:
               "persisted across the session, matching client-facing polish expectations.",
-          },
-          {
-            title: "SEO-conscious structure",
-            description:
-              "semantic HTML and metadata aimed at ranking for local search terms.",
           },
         ],
         techStack: ["Vite", "Tailwind CSS", "Framer Motion"],
@@ -462,79 +472,89 @@ export const site = {
         detailOverviewHeading: "A site that has to sell, not just exist",
       },
       {
-        slug: "restaurant-mockup",
-        name: "Restaurant Mockup",
+        slug: "bistro-burger",
+        name: "Bistro Burger",
         tag: "LIVE",
-        monogram: "RM",
+        monogram: "BB",
         thumbnail: "/screenshots/bistroburger.webp",
         gif: "/gifs/bistroburger.gif",
         homeBadges: ["Vite", "Reservation UI", "Responsive Design"],
         summary:
-          "A burger gastropub concept site — menu presentation and a table-reservation flow, designed to feel local, appetizing, and easy to book from.",
+          "A live site for a burger gastropub in Szczecin — menu presentation and a table-reservation flow, designed to feel local, appetizing, and easy to book from.",
         overview: [
-          "This was a mockup client brief: a gastropub with craft beer and signature burgers, needing a site that felt as warm and specific as the food itself rather than a generic restaurant template.",
+          "A gastropub in Szczecin with craft beer and signature burgers needed a site that felt as warm and specific as the food itself, rather than a generic restaurant template. The brief was simple: make someone hungry, then make booking a table effortless.",
           "The build leans heavily on large photography, a confident type scale for the menu, and a reservation flow that never makes the visitor hunt for a way to book a table.",
         ],
         keyFeatures: [
           {
-            title: "Menu presentation",
+            title: "Reservation-first layout",
             description:
-              "categorized, image-led menu sections built for quick scanning on mobile.",
+              "a persistent booking CTA on every section — the shortest possible path from hungry to booked.",
           },
           {
-            title: "Table reservation CTA",
+            title: "Appetite-driven menu presentation",
             description:
-              "a persistent, low-friction path from any section straight to booking.",
+              "categorized, image-led menu sections built for quick scanning on a phone at the table.",
           },
           {
-            title: "Imagery-heavy responsive layout",
+            title: "Imagery-heavy responsive design",
             description:
-              "carefully cropped hero and section images that hold up from phone to desktop.",
+              "carefully cropped hero and section photography that holds up from phone to desktop.",
+          },
+          {
+            title: "Fast on restaurant Wi-Fi",
+            description:
+              "optimized images and a light bundle keep it snappy even on a weak mobile signal.",
           },
         ],
         techStack: ["Vite", "Tailwind CSS"],
         liveUrl: "https://www.burgerszczecin.pl/",
         repoUrl: "https://github.com/Marmo77/Restaurant-Mockup-Portfolio",
         detailTagline:
-          "A concept site for a burger gastropub — built around one job: make someone hungry enough to book a table in under a minute.",
+          "A live site for a burger gastropub in Szczecin — built around one job: make someone hungry enough to book a table in under a minute.",
         detailBadges: [{ label: "Live", variant: "mint" }],
         detailOverviewHeading: "Designing for appetite, not just layout",
       },
       {
         slug: "nordcar-service",
-        name: "NordCar Service",
+        name: "NordCar Serwis",
         tag: "LIVE",
         monogram: "NC",
         thumbnail: "/screenshots/nordcar.webp",
         gif: "/gifs/nordcar.gif",
         homeBadges: ["Vite", "Tailwind CSS", "Business Site"],
         summary:
-          "A business site mockup for a car service company — service listings, booking CTAs, and a clean, trust-building layout for a local audience.",
+          "A live business site for a car service company — service listings, booking CTAs, and a clean, trust-building layout for a local audience.",
         overview: [
-          "Car service customers want two things fast: proof the shop is competent, and a way to book without calling. This mockup is built around a clear services list, direct booking CTAs, and a layout that reads as established rather than improvised — a companion piece to the Car Service Dashboard's admin side.",
+          "Car service customers want two things fast: proof the shop is competent, and a way to book without calling. This site is built around a clear services list, direct booking CTAs, and a layout that reads as established rather than improvised — a companion piece to the Car Service Dashboard's admin side.",
         ],
         keyFeatures: [
           {
-            title: "Service listings",
+            title: "Book without calling",
             description:
-              "clear pricing and scope for each service, no hidden details.",
+              'repeated "Umów wizytę" CTAs at natural decision points down the page, not just in the header.',
           },
           {
-            title: "Booking CTAs",
+            title: "Transparent service listings",
             description:
-              "repeated at natural decision points down the page rather than only in the header.",
+              "clear pricing and scope for each service, so a visitor knows what to expect before they book.",
           },
           {
             title: "Trust-building layout",
             description:
-              "clean grid, consistent spacing, and a tone closer to a corporate service page than a template.",
+              "clean grid, consistent spacing, opening hours and contact up top — a tone closer to a corporate service page than a template.",
+          },
+          {
+            title: "Fully responsive",
+            description:
+              "reads clearly from a phone in the parking lot to a desktop at home, with the booking CTA always in reach.",
           },
         ],
         techStack: ["Vite", "Tailwind CSS"],
         liveUrl: "https://nordcar-serwis.vercel.app/",
         repoUrl: "https://github.com/Marmo77/Carservice-mockup-website",
         detailTagline:
-          "A business site mockup for a car service company — built to make a mechanic's shop feel as trustworthy online as it is in person.",
+          "A live business site for a car service company — built to make a mechanic's shop feel as trustworthy online as it is in person.",
         detailBadges: [{ label: "Live", variant: "mint" }],
         detailOverviewHeading: "Trust, built through layout",
       },

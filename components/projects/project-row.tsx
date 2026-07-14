@@ -29,7 +29,7 @@ export function ProjectRow({
     >
       <div className="relative aspect-[4/2.75] w-full overflow-hidden rounded-[22px] border border-border bg-card-bg md:flex-[0_0_52%]">
         {project.thumbnail ? (
-          <Link className="group" href={`/projects/${project.slug}`}>
+          <Link className="group absolute inset-0" href={`/projects/${project.slug}`}>
             <Image
               src={project.thumbnail}
               alt={`${project.name} — screenshot`}

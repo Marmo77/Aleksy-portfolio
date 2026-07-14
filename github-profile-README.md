@@ -77,9 +77,9 @@ starting university this October to study IT.
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>🍔 Restaurant Mockup</h3>
+      <h3>🍔 Bistro Burger</h3>
       <p><em>Live</em></p>
-      <p>A burger gastropub concept site — menu presentation and a table-reservation flow, designed to feel local, appetizing, and easy to book from.</p>
+      <p>A live site for a burger gastropub in Szczecin — menu presentation and a table-reservation flow, designed to feel local, appetizing, and easy to book from.</p>
       <p>
         <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
         <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
@@ -87,9 +87,9 @@ starting university this October to study IT.
       <a href="https://www.burgerszczecin.pl/">Live demo →</a> · <a href="https://github.com/Marmo77/Restaurant-Mockup-Portfolio">Source →</a>
     </td>
     <td width="50%" valign="top">
-      <h3>🔧 NordCar Service</h3>
+      <h3>🔧 NordCar Serwis</h3>
       <p><em>Live</em></p>
-      <p>A business site mockup for a car service company — service listings, booking CTAs, and a clean, trust-building layout for a local audience.</p>
+      <p>A live business site for a car service company — service listings, booking CTAs, and a clean, trust-building layout for a local audience.</p>
       <p>
         <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
         <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
