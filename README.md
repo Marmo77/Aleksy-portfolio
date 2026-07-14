@@ -13,6 +13,14 @@ dedicated case-study pages for each project.
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=flat-square&logo=shadcnui&logoColor=white)
 
+
+
+</div>
+
+<div align="center">
+
+![WebsiteImage]("/imgs/gh_image.jpg")
+
 </div>
 
 ---
