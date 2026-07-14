@@ -422,9 +422,9 @@ export const site = {
         name: "AD.digital",
         tag: "LIVE",
         monogram: "AD",
-        thumbnail: "/screenshots/addigital.jpg",
+        thumbnail: "/screenshots/addigital.webp",
         gif: "/gifs/addigital.gif",
-        homeBadges: ["Next.js", "Tailwind CSS", "Framer Motion"],
+        homeBadges: ["Vite", "Tailwind CSS", "Framer Motion"],
         summary:
           "The marketing site for my own small web agency — built for speed and conversion, with a portfolio grid, animated hero, and a quote-request flow for local businesses.",
         overview: [
@@ -453,7 +453,7 @@ export const site = {
               "semantic HTML and metadata aimed at ranking for local search terms.",
           },
         ],
-        techStack: ["Next.js", "Tailwind CSS", "Framer Motion"],
+        techStack: ["Vite", "Tailwind CSS", "Framer Motion"],
         liveUrl: "https://addigital.vercel.app/",
         repoUrl: "https://github.com/Marmo77/AD-digital-website",
         detailTagline:
@@ -466,9 +466,9 @@ export const site = {
         name: "Restaurant Mockup",
         tag: "LIVE",
         monogram: "RM",
-        thumbnail: "/screenshots/bistroburger.jpg",
+        thumbnail: "/screenshots/bistroburger.webp",
         gif: "/gifs/bistroburger.gif",
-        homeBadges: ["React", "Reservation UI", "Responsive Design"],
+        homeBadges: ["Vite", "Reservation UI", "Responsive Design"],
         summary:
           "A burger gastropub concept site — menu presentation and a table-reservation flow, designed to feel local, appetizing, and easy to book from.",
         overview: [
@@ -492,7 +492,7 @@ export const site = {
               "carefully cropped hero and section images that hold up from phone to desktop.",
           },
         ],
-        techStack: ["React", "Tailwind CSS"],
+        techStack: ["Vite", "Tailwind CSS"],
         liveUrl: "https://www.burgerszczecin.pl/",
         repoUrl: "https://github.com/Marmo77/Restaurant-Mockup-Portfolio",
         detailTagline:
@@ -505,9 +505,9 @@ export const site = {
         name: "NordCar Service",
         tag: "LIVE",
         monogram: "NC",
-        thumbnail: "/screenshots/nordcar.jpg",
+        thumbnail: "/screenshots/nordcar.webp",
         gif: "/gifs/nordcar.gif",
-        homeBadges: ["React", "Tailwind CSS", "Business Site"],
+        homeBadges: ["Vite", "Tailwind CSS", "Business Site"],
         summary:
           "A business site mockup for a car service company — service listings, booking CTAs, and a clean, trust-building layout for a local audience.",
         overview: [
@@ -530,7 +530,7 @@ export const site = {
               "clean grid, consistent spacing, and a tone closer to a corporate service page than a template.",
           },
         ],
-        techStack: ["React", "Tailwind CSS"],
+        techStack: ["Vite", "Tailwind CSS"],
         liveUrl: "https://nordcar-serwis.vercel.app/",
         repoUrl: "https://github.com/Marmo77/Carservice-mockup-website",
         detailTagline:

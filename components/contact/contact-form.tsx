@@ -107,7 +107,7 @@ export function ContactForm() {
                   rows={6}
                   placeholder={site.contact.form.messagePlaceholder}
                   {...field}
-                  className="min-h-[80px]"
+                  className="min-h-[80px] max-h-[175px]"
                 />
               </FormControl>
               <FormMessage />
