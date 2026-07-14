@@ -61,6 +61,7 @@ export interface Project {
   featured?: boolean;
   monogram: string;
   thumbnail?: string;
+  gif?: string;
   homeBadges: string[];
   summary: string;
   overview: string[];

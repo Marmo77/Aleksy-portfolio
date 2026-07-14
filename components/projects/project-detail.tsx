@@ -22,7 +22,11 @@ export function ProjectDetail({
     <>
       <section className="pt-[150px] pb-16">
         <div className="mx-auto max-w-[1180px] px-6">
-          <Button asChild variant="text" className="mb-6 text-sm text-text-muted">
+          <Button
+            asChild
+            variant="text"
+            className="mb-6 text-sm text-text-muted"
+          >
             <Link href="/#projects">
               <ArrowLeft size={13} strokeWidth={2.5} />
               Back to all projects
@@ -72,14 +76,21 @@ export function ProjectDetail({
       </section>
 
       <Reveal className="mx-auto max-w-[1180px] px-6 pb-8">
-        <div className="relative flex aspect-[16/7.5] items-center justify-center overflow-hidden rounded-3xl border border-border bg-card-bg">
-          {project.thumbnail ? (
+        <div className="relative aspect-[16/7.5] overflow-hidden rounded-3xl border border-border bg-card-bg">
+          {project.gif ? (
+            <img
+              src={project.gif}
+              alt={`${project.name} — animated preview`}
+              className="h-full w-full object-cover object-top"
+              loading="lazy"
+            />
+          ) : project.thumbnail ? (
             <>
               <Image
                 src={project.thumbnail}
                 alt={`${project.name} — screenshot`}
                 fill
-                sizes="100vw"
+                sizes="(max-width: 1180px) 100vw, 1180px"
                 priority
                 className="object-cover object-top"
               />
@@ -101,7 +112,11 @@ export function ProjectDetail({
               </div>
             </div>
           )}
-          <Badge variant={tagVariant} className="absolute top-[22px] left-[22px] z-[2]">
+
+          <Badge
+            variant={tagVariant}
+            className="absolute top-[22px] left-[22px] z-[2]"
+          >
             {project.tag}
           </Badge>
         </div>
@@ -135,8 +150,10 @@ export function ProjectDetail({
                       <Check size={12} strokeWidth={3} className="text-mint" />
                     </div>
                     <p className="text-text-muted">
-                      <span className="font-medium text-foreground">{feature.title}</span> —{" "}
-                      {feature.description}
+                      <span className="font-medium text-foreground">
+                        {feature.title}
+                      </span>{" "}
+                      — {feature.description}
                     </p>
                   </div>
                 ))}
@@ -148,7 +165,9 @@ export function ProjectDetail({
                 <span className="font-mono text-xs tracking-[0.14em] text-text-dim uppercase">
                   What&apos;s next
                 </span>
-                <p className="mt-4 leading-relaxed text-text-muted">{project.whatsNext}</p>
+                <p className="mt-4 leading-relaxed text-text-muted">
+                  {project.whatsNext}
+                </p>
               </Reveal>
             )}
           </div>
@@ -170,14 +189,22 @@ export function ProjectDetail({
                   </span>
                   <div className="mt-4 flex flex-col gap-3">
                     {project.liveUrl && (
-                      <Button asChild variant="text" className="justify-start text-sm">
+                      <Button
+                        asChild
+                        variant="text"
+                        className="justify-start text-sm"
+                      >
                         <Link href={project.liveUrl} target="_blank">
                           Live demo
                           <ArrowUpRight size={12} strokeWidth={2.5} />
                         </Link>
                       </Button>
                     )}
-                    <Button asChild variant="text" className="justify-start text-sm">
+                    <Button
+                      asChild
+                      variant="text"
+                      className="justify-start text-sm"
+                    >
                       <Link href={project.repoUrl} target="_blank">
                         Source on GitHub
                         <ArrowUpRight size={12} strokeWidth={2.5} />
