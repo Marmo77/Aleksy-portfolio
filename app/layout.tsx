@@ -23,9 +23,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Goodman — Developer Portfolio",
+  title: "Aleksy Dobrodziej — Developer Portfolio",
   description:
     "Frontend-leaning developer shipping full products — from marketing sites to a database-backed admin dashboard with authentication.",
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
