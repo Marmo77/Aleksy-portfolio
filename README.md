@@ -19,7 +19,7 @@ dedicated case-study pages for each project.
 
 <div align="center">
 
-![WebsiteImage]("/imgs/gh_image.jpg")
+![WebsiteImage](public/imgs/gh_image.jpg)
 
 </div>
 
