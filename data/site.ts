@@ -111,7 +111,7 @@ export const site = {
       "I design and build real, working software — from marketing sites to a database-backed admin dashboard with authentication. Self-taught, measuring progress in commits and shipped features rather than job titles, and starting university this October to study IT.",
     stats: [
       { value: "1,141", label: "contributions / yr" },
-      { value: "4", label: "shipped projects" },
+      { value: "6", label: "shipped projects" },
       { value: "🇵🇱", label: "Team Poland · MOS 2026" },
     ] as StatItem[],
     githubHandle: "Marmo77",
@@ -353,7 +353,7 @@ export const site = {
     sectionLabel: "05 — Projects",
     heading: "Selected work.",
     subheading:
-      "Four real builds, from a marketing site to a full authenticated admin dashboard. Each one links to a detail page and the source.",
+      "Six real builds, from marketing sites to a full authenticated admin dashboard. Each one links to a detail page and the source.",
     viewAllLabel: "View all repositories on GitHub",
     viewAllUrl: "https://github.com/Marmo77",
     items: [
@@ -494,7 +494,7 @@ export const site = {
         ],
         techStack: ["Vite", "Tailwind CSS"],
         liveUrl: "https://www.burgerszczecin.pl/",
-        repoUrl: "https://github.com/Marmo77/Restaurant-Mockup-Portfolio",
+        repoUrl: "https://github.com/Marmo77/Restaurant-burger-website",
         detailTagline:
           "A concept site for a burger gastropub — built around one job: make someone hungry enough to book a table in under a minute.",
         detailBadges: [{ label: "Live", variant: "mint" }],
@@ -531,12 +531,100 @@ export const site = {
           },
         ],
         techStack: ["Vite", "Tailwind CSS"],
-        liveUrl: "https://nordcar-serwis.vercel.app/",
-        repoUrl: "https://github.com/Marmo77/Carservice-mockup-website",
+        liveUrl: "https://nord-car.pl",
+        repoUrl: "https://github.com/Marmo77/Carservice-website",
         detailTagline:
           "A business site mockup for a car service company — built to make a mechanic's shop feel as trustworthy online as it is in person.",
         detailBadges: [{ label: "Live", variant: "mint" }],
         detailOverviewHeading: "Trust, built through layout",
+      },
+      {
+        slug: "meblex",
+        name: "Meblex",
+        tag: "LIVE",
+        monogram: "MX",
+        thumbnail: "/screenshots/meblexszczecin.webp",
+        gif: "/gifs/meblexszczecin.gif",
+        homeBadges: ["Vite", "Tailwind CSS", "Portfolio Gallery"],
+        summary:
+          "A website for a custom furniture maker in Szczecin — a visual portfolio of bespoke fit-outs with a clear path to a made-to-measure quote.",
+        overview: [
+          "Meblex builds bespoke furniture — kitchens, wardrobes, commercial fit-outs — where the work sells itself once you can see it. The site's job is to put that craftsmanship front and centre and make requesting a custom quote effortless.",
+          "It leans on a large, image-led gallery of finished projects, a clear breakdown of what they make, and a contact path tuned for one thing: turning a browse into an enquiry.",
+        ],
+        keyFeatures: [
+          {
+            title: "Project gallery",
+            description:
+              "an image-led showcase of finished custom builds — the strongest sales tool a furniture maker has.",
+          },
+          {
+            title: "Made-to-measure quote path",
+            description:
+              "a low-friction route from any section to a custom-order enquiry.",
+          },
+          {
+            title: "Category breakdown",
+            description:
+              "clear sections for kitchens, wardrobes and commercial work so visitors self-identify fast.",
+          },
+          {
+            title: "Responsive, image-heavy layout",
+            description:
+              "high-resolution photography that stays crisp and fast from phone to desktop.",
+          },
+        ],
+        techStack: ["Vite", "Tailwind CSS"],
+        liveUrl: "https://www.meblex-szczecin.pl/",
+        repoUrl: "https://github.com/Marmo77/CustomFurnitures-website",
+        detailTagline:
+          "A website for a custom furniture maker in Szczecin — built to let the craftsmanship sell itself and make requesting a made-to-measure quote effortless.",
+        detailBadges: [{ label: "Live", variant: "mint" }],
+        detailOverviewHeading: "Letting the work sell itself",
+      },
+      {
+        slug: "nova-ubezpieczenia",
+        name: "Nova Ubezpieczenia",
+        tag: "LIVE",
+        monogram: "NU",
+        thumbnail: "/screenshots/novaubezpieczenia.webp",
+        gif: "/gifs/novaubezpieczenia.gif",
+        homeBadges: ["Vite", "Tailwind CSS", "Lead Capture"],
+        summary:
+          "A website for an insurance agency — a clear presentation of coverage types and a trust-first layout that turns visitors into quote requests.",
+        overview: [
+          "Insurance is a trust purchase: people want to know they're dealing with someone credible before they hand over their details. Nova Ubezpieczenia needed a site that reads as established and reassuring, then makes asking for a quote simple.",
+          "The build organizes coverage into clear categories, keeps a contact and quote CTA within reach at every scroll depth, and keeps the tone professional and calm rather than salesy.",
+        ],
+        keyFeatures: [
+          {
+            title: "Coverage categories",
+            description:
+              "insurance types laid out clearly so a visitor finds what applies to them in seconds.",
+          },
+          {
+            title: "Quote-request CTA",
+            description:
+              "a persistent, low-friction path to a contact and quote form from anywhere on the page.",
+          },
+          {
+            title: "Trust-first layout",
+            description:
+              "clean structure, calm tone and clear contact details — the credibility signals an insurance client looks for.",
+          },
+          {
+            title: "Fully responsive",
+            description:
+              "reads clearly on a phone or desktop, with the quote CTA always in reach.",
+          },
+        ],
+        techStack: ["Vite", "Tailwind CSS"],
+        liveUrl: "https://www.nova-ubezpieczenia.pl/",
+        repoUrl: "https://github.com/Marmo77/Insurance-company-website",
+        detailTagline:
+          "A website for an insurance agency — built to read as credible and reassuring, then make requesting a quote simple.",
+        detailBadges: [{ label: "Live", variant: "mint" }],
+        detailOverviewHeading: "Trust first, quote second",
       },
     ] as Project[],
   },
