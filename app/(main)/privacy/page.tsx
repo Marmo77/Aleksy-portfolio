@@ -5,8 +5,10 @@ import { site } from "@/data/site";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: `Privacy Policy — ${site.fullName}`,
+  title: "Privacy Policy",
   description: "How contact form submissions are used on this site.",
+  alternates: { canonical: "/privacy" },
+  robots: { index: false, follow: true },
 };
 
 export default function PrivacyPage() {

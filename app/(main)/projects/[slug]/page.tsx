@@ -17,9 +17,24 @@ export async function generateMetadata({
 
   if (!project) return {};
 
+  const path = `/projects/${project.slug}`;
+
   return {
-    title: `${project.name} — ${site.fullName}`,
+    title: project.name,
     description: project.detailTagline,
+    keywords: [project.name, ...project.techStack, site.fullName],
+    alternates: { canonical: path },
+    openGraph: {
+      type: "article",
+      title: `${project.name} — ${site.fullName}`,
+      description: project.detailTagline,
+      url: path,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.name} — ${site.fullName}`,
+      description: project.detailTagline,
+    },
   };
 }
 
