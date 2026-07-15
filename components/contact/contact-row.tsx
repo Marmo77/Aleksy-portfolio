@@ -3,15 +3,30 @@ import { Mail, MapPin, Plus, ArrowUpRight } from "lucide-react";
 import type { ContactRow as ContactRowData } from "@/data/site";
 import { GithubIcon } from "@/components/shared/github-icon";
 import { cn } from "@/lib/utils";
+import { LinkedinIcon } from "../shared/linkedin-icon";
 
-const ICONS: Record<ContactRowData["icon"], React.ComponentType<{ size?: number; className?: string; strokeWidth?: number }>> = {
+const ICONS: Record<
+  ContactRowData["icon"],
+  React.ComponentType<{
+    size?: number;
+    className?: string;
+    strokeWidth?: number;
+  }>
+> = {
   mail: Mail,
   github: GithubIcon,
+  linkedin: LinkedinIcon,
   location: MapPin,
   "open-to": Plus,
 };
 
-export function ContactRow({ row, isLast }: { row: ContactRowData; isLast: boolean }) {
+export function ContactRow({
+  row,
+  isLast,
+}: {
+  row: ContactRowData;
+  isLast: boolean;
+}) {
   const Icon = ICONS[row.icon];
 
   const content = (
@@ -38,7 +53,8 @@ export function ContactRow({ row, isLast }: { row: ContactRowData; isLast: boole
   const className = cn(
     "group flex items-center gap-4 rounded-[10px] px-1.5 py-[18px] transition-[padding,background] duration-200",
     !isLast && "border-b border-border",
-    row.href && "hover:bg-mint-soft hover:pl-3 [&:hover_.contact-row-arrow]:translate-x-0 [&:hover_.contact-row-arrow]:opacity-100"
+    row.href &&
+      "hover:bg-mint-soft hover:pl-3 [&:hover_.contact-row-arrow]:translate-x-0 [&:hover_.contact-row-arrow]:opacity-100",
   );
 
   if (row.href) {

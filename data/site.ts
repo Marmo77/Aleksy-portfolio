@@ -76,7 +76,7 @@ export interface Project {
 }
 
 export interface ContactRow {
-  icon: "mail" | "github" | "location" | "open-to";
+  icon: "mail" | "github" | "location" | "open-to" | "linkedin";
   label: string;
   value: string;
   href?: string;
@@ -659,6 +659,12 @@ export const site = {
         label: "GitHub",
         value: "github.com/Marmo77",
         href: "https://github.com/Marmo77",
+      },
+      {
+        icon: "linkedin",
+        label: "LinkedIn",
+        value: "aleksydobrodziej",
+        href: "https://www.linkedin.com/in/aleksydobrodziej/",
       },
       { icon: "location", label: "Based in", value: "Poland" },
       {
