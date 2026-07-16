@@ -20,7 +20,7 @@ export function SkillsSection() {
           <p className="mt-4 max-w-[560px] text-text-muted">{site.skills.subheading}</p>
         </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-5">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-5 [&>*]:min-w-0">
           <SkillCardFrontend card={frontend} />
           <SkillCardBackend card={backend} />
           <SkillCardExcel card={excel} />
