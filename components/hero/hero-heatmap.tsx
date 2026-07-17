@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { site } from "@/data/site";
+import { useSite } from "@/components/i18n/site-provider";
 
 const WEEKS = 28;
 const DAYS = 7;
@@ -32,6 +32,7 @@ function seededLevels(seed: number) {
 }
 
 export function HeroHeatmap() {
+  const site = useSite();
   const [levels] = React.useState<number[]>(() => seededLevels(site.hero.contributionsLastYear));
   const [total, setTotal] = React.useState<number>(site.hero.contributionsLastYear);
 
@@ -60,7 +61,7 @@ export function HeroHeatmap() {
     <div className="rounded-2xl border border-border bg-card-bg p-5 pb-[18px] shadow-elevated">
       <div className="mb-4 flex items-center justify-between">
         <span className="font-mono text-xs text-text-muted">
-          {total.toLocaleString("en-US")} contributions in the last year
+          {total.toLocaleString("en-US")} {site.ui.heatmap.contributions}
         </span>
         <a
           href={`https://github.com/${site.hero.githubHandle}`}
@@ -86,13 +87,13 @@ export function HeroHeatmap() {
       <div className="mt-4 flex items-center justify-between">
         <span className="font-mono text-[11px] text-text-dim">Jul — Jul</span>
         <div className="flex items-center gap-1.5">
-          <span className="font-mono text-[11px] text-text-dim">Less</span>
+          <span className="font-mono text-[11px] text-text-dim">{site.ui.heatmap.less}</span>
           <span className="h-[10px] w-[10px] rounded-[2.5px] bg-bg-soft" />
           <span className="h-[10px] w-[10px] rounded-[2.5px] bg-mint-soft" />
           <span className="h-[10px] w-[10px] rounded-[2.5px]" style={{ background: "color-mix(in srgb, var(--mint) 45%, var(--bg-soft))" }} />
           <span className="h-[10px] w-[10px] rounded-[2.5px]" style={{ background: "color-mix(in srgb, var(--mint) 75%, var(--bg-soft))" }} />
           <span className="h-[10px] w-[10px] rounded-[2.5px] bg-mint" />
-          <span className="font-mono text-[11px] text-text-dim">More</span>
+          <span className="font-mono text-[11px] text-text-dim">{site.ui.heatmap.more}</span>
         </div>
       </div>
     </div>

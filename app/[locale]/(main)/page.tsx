@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { isLocale } from "@/lib/i18n";
+import { hreflangAlternates } from "@/lib/seo";
 import { HeroSection } from "@/components/hero/hero-section";
 import { AboutSection } from "@/components/about/about-section";
 import { SkillsSection } from "@/components/skills/skills-section";
@@ -7,9 +9,20 @@ import { AgencySection } from "@/components/agency/agency-section";
 import { ProjectsSection } from "@/components/projects/projects-section";
 import { ContactSection } from "@/components/contact/contact-section";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) return {};
+  return {
+    alternates: {
+      canonical: `/${locale}`,
+      languages: hreflangAlternates(""),
+    },
+  };
+}
 
 export default function HomePage() {
   return (

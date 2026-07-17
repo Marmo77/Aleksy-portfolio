@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Send, CheckCircle2 } from "lucide-react";
-import { site } from "@/data/site";
+import { useSite, useLocale } from "@/components/i18n/site-provider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -20,43 +20,49 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-const contactSchema = z.object({
-  name: z.string().min(1, "Your name is required"),
-  email: z.email("Enter a valid email address"),
-  message: z.string().min(1, "Tell me what you're hiring for"),
-  consent: z.boolean().refine((val) => val === true, {
-    message: "Please accept the privacy policy to continue",
-  }),
-});
-
-type ContactValues = z.infer<typeof contactSchema>;
-
-function submitViaMailto(values: ContactValues) {
-  const subject = encodeURIComponent(`Portfolio contact from ${values.name}`);
-  const body = encodeURIComponent(
-    `${values.message}\n\n— ${values.name} (${values.email})`,
-  );
-  window.location.href = `mailto:${site.contact.email}?subject=${subject}&body=${body}`;
-}
+type ContactValues = {
+  name: string;
+  email: string;
+  message: string;
+  consent: boolean;
+};
 
 export function ContactForm() {
+  const site = useSite();
+  const locale = useLocale();
+  const t = site.ui.contactForm;
   const [submitted, setSubmitted] = React.useState(false);
+
+  const schema = React.useMemo(
+    () =>
+      z.object({
+        name: z.string().min(1, t.errName),
+        email: z.email(t.errEmail),
+        message: z.string().min(1, t.errMessage),
+        consent: z.boolean().refine((val) => val === true, {
+          message: t.errConsent,
+        }),
+      }),
+    [t]
+  );
+
   const form = useForm<ContactValues>({
-    resolver: zodResolver(contactSchema),
+    resolver: zodResolver(schema),
     defaultValues: { name: "", email: "", message: "", consent: false },
   });
 
   function onSubmit(values: ContactValues) {
-    submitViaMailto(values);
+    const subject = encodeURIComponent(`${t.mailSubject} ${values.name}`);
+    const body = encodeURIComponent(
+      `${values.message}\n\n— ${values.name} (${values.email})`
+    );
+    window.location.href = `mailto:${site.contact.email}?subject=${subject}&body=${body}`;
     setSubmitted(true);
   }
 
   return (
     <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col h-full"
-      >
+      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col h-full">
         <div className="grid gap-5 sm:grid-cols-2">
           <FormField
             control={form.control}
@@ -64,10 +70,10 @@ export function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="font-mono text-[11.5px] tracking-[0.06em] text-text-dim uppercase">
-                  Name
+                  {t.name}
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="Your name" {...field} />
+                  <Input placeholder={t.name} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -79,14 +85,10 @@ export function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="font-mono text-[11.5px] tracking-[0.06em] text-text-dim uppercase">
-                  Email
+                  {t.email}
                 </FormLabel>
                 <FormControl>
-                  <Input
-                    type="email"
-                    placeholder="you@company.com"
-                    {...field}
-                  />
+                  <Input type="email" placeholder="you@company.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -100,7 +102,7 @@ export function ContactForm() {
           render={({ field }) => (
             <FormItem className="mt-5">
               <FormLabel className="font-mono text-[11.5px] tracking-[0.06em] text-text-dim uppercase">
-                Message
+                {t.message}
               </FormLabel>
               <FormControl>
                 <Textarea
@@ -134,10 +136,10 @@ export function ContactForm() {
                 >
                   {site.contact.form.consentLabel}{" "}
                   <Link
-                    href={site.contact.form.privacyUrl}
+                    href={`/${locale}${site.contact.form.privacyUrl}`}
                     className="text-mint hover:underline"
                   >
-                    Privacy Policy
+                    {t.privacyPolicy}
                   </Link>
                   .
                 </label>

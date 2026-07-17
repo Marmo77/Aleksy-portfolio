@@ -1,8 +1,11 @@
-import { site } from "@/data/site";
+"use client";
+
+import { useSite } from "@/components/i18n/site-provider";
 import { Reveal } from "@/components/shared/reveal";
 import { EvidenceBentoGrid } from "@/components/evidence/evidence-bento-grid";
 
 export function EvidenceSection() {
+  const site = useSite();
   return (
     <section className="py-28">
       <div className="mx-auto max-w-[1180px] px-6">

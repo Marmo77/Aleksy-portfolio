@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { site } from "@/data/site";
+import { useSite } from "@/components/i18n/site-provider";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/shared/reveal";
 import { SpotlightSection } from "@/components/shared/spotlight-section";
@@ -12,7 +14,9 @@ const FLOAT_DELAYS = [0, 0.6, 1.2, 1.8];
 const REVEAL_DELAYS = [0.06, 0.12, 0.18, 0.24];
 
 export function AgencySection() {
+  const site = useSite();
   const { agency } = site;
+  const [headingBefore] = agency.heading.split("AD.digital.");
 
   return (
     <SpotlightSection
@@ -28,7 +32,8 @@ export function AgencySection() {
             {agency.sectionLabel}
           </span>
           <h2 className="font-display mt-3 text-[34px] leading-tight font-bold sm:text-[44px]">
-            I run a small web agency — <span className="gradient-text">AD.digital.</span>
+            {headingBefore}
+            <span className="gradient-text">AD.digital.</span>
           </h2>
           <p className="mt-5 text-[17px] leading-relaxed text-text-muted">{agency.paragraph}</p>
           <div className="mt-8">

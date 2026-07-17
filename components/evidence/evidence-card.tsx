@@ -1,3 +1,5 @@
+"use client";
+
 import {
   GraduationCap,
   Table2,
@@ -8,7 +10,7 @@ import {
   Languages,
 } from "lucide-react";
 import type { EvidenceStat } from "@/data/site";
-import { site } from "@/data/site";
+import { useSite } from "@/components/i18n/site-provider";
 import { Surface } from "@/components/shared/surface";
 import { Reveal } from "@/components/shared/reveal";
 import { CountUp } from "@/components/shared/count-up";
@@ -26,6 +28,7 @@ const ICONS: Record<string, React.ComponentType<{ size?: number; className?: str
 };
 
 export function EvidenceCard({ stat, delay }: { stat: EvidenceStat; delay: number }) {
+  const site = useSite();
   const Icon = ICONS[stat.id];
   const spanClass = stat.span === 3 ? "md:col-span-3" : "md:col-span-2";
 

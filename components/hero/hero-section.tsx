@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { site } from "@/data/site";
+import { useSite } from "@/components/i18n/site-provider";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/shared/reveal";
 import { SpotlightSection } from "@/components/shared/spotlight-section";
@@ -8,6 +10,7 @@ import { HeroHeatmap } from "@/components/hero/hero-heatmap";
 import { HeroMarquee } from "@/components/hero/hero-marquee";
 
 export function HeroSection() {
+  const site = useSite();
   const { hero } = site;
   const [headlineStart, headlineGradient] = hero.headline;
 
@@ -32,12 +35,12 @@ export function HeroSection() {
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <Button asChild size="cta">
                 <Link href="#projects">
-                  View projects
+                  {site.ui.hero.viewProjects}
                   <ArrowRight size={15} strokeWidth={2.5} />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="cta">
-                <Link href="#contact">Get in touch</Link>
+                <Link href="#contact">{site.ui.hero.getInTouch}</Link>
               </Button>
             </div>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3">

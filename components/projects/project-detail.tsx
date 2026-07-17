@@ -1,35 +1,38 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
-import type { Project } from "@/data/site";
+import type { Project, SiteContent } from "@/data/site";
+import type { Locale } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Surface } from "@/components/shared/surface";
 import { Reveal } from "@/components/shared/reveal";
 
 export function ProjectDetail({
+  site,
+  locale,
   project,
   prevProject,
   nextProject,
 }: {
+  site: SiteContent;
+  locale: Locale;
   project: Project;
   prevProject: Project | null;
   nextProject: Project | null;
 }) {
+  const t = site.ui.projectDetail;
   const tagVariant = project.tag === "LIVE" ? "mint" : "amber";
+  const home = `/${locale}`;
 
   return (
     <>
       <section className="pt-[150px] pb-16">
         <div className="mx-auto max-w-[1180px] px-6">
-          <Button
-            asChild
-            variant="text"
-            className="mb-6 text-sm text-text-muted"
-          >
-            <Link href="/#projects">
+          <Button asChild variant="text" className="mb-6 text-sm text-text-muted">
+            <Link href={`${home}#projects`}>
               <ArrowLeft size={13} strokeWidth={2.5} />
-              Back to all projects
+              {t.back}
             </Link>
           </Button>
 
@@ -53,20 +56,20 @@ export function ProjectDetail({
               <>
                 <Button asChild size="cta">
                   <Link href={project.liveUrl} target="_blank">
-                    Open live demo
+                    {t.openLiveDemo}
                     <ArrowUpRight size={14} strokeWidth={2.5} />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="cta">
                   <Link href={project.repoUrl} target="_blank">
-                    View source
+                    {t.viewSource}
                   </Link>
                 </Button>
               </>
             ) : (
               <Button asChild size="cta">
                 <Link href={project.repoUrl} target="_blank">
-                  View source on GitHub
+                  {t.viewSourceGithub}
                   <ArrowUpRight size={14} strokeWidth={2.5} />
                 </Link>
               </Button>
@@ -78,6 +81,7 @@ export function ProjectDetail({
       <Reveal className="mx-auto max-w-[1180px] px-6 pb-8">
         <div className="relative aspect-[16/7.5] overflow-hidden rounded-3xl border border-border bg-card-bg">
           {project.gif ? (
+            // eslint-disable-next-line @next/next/no-img-element
             <img
               src={project.gif}
               alt={`${project.name} — animated preview`}
@@ -113,11 +117,8 @@ export function ProjectDetail({
             </div>
           )}
 
-          <Badge
-            variant={tagVariant}
-            className="absolute top-[22px] left-[22px] z-[2]"
-          >
-            {project.tag}
+          <Badge variant={tagVariant} className="absolute top-[22px] left-[22px] z-[2]">
+            {site.projects.tagLabels[project.tag]}
           </Badge>
         </div>
       </Reveal>
@@ -127,7 +128,7 @@ export function ProjectDetail({
           <div>
             <Reveal>
               <span className="font-mono text-xs tracking-[0.14em] text-text-dim uppercase">
-                Overview
+                {t.overview}
               </span>
               <h2 className="font-display mt-3 text-2xl font-bold">
                 {project.detailOverviewHeading}
@@ -141,7 +142,7 @@ export function ProjectDetail({
 
             <Reveal className="mt-14">
               <span className="font-mono text-xs tracking-[0.14em] text-text-dim uppercase">
-                Key features
+                {t.keyFeatures}
               </span>
               <div className="mt-5 flex flex-col gap-5">
                 {project.keyFeatures.map((feature) => (
@@ -163,7 +164,7 @@ export function ProjectDetail({
             {project.whatsNext && (
               <Reveal className="mt-14">
                 <span className="font-mono text-xs tracking-[0.14em] text-text-dim uppercase">
-                  What&apos;s next
+                  {t.whatsNext}
                 </span>
                 <p className="mt-4 leading-relaxed text-text-muted">
                   {project.whatsNext}
@@ -176,7 +177,7 @@ export function ProjectDetail({
             <Reveal>
               <Surface className="p-7">
                 <span className="font-mono text-xs tracking-[0.14em] text-text-dim uppercase">
-                  Tech stack
+                  {t.techStack}
                 </span>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.techStack.map((tech) => (
@@ -185,28 +186,20 @@ export function ProjectDetail({
                 </div>
                 <div className="mt-7 border-t border-border pt-7">
                   <span className="font-mono text-xs tracking-[0.14em] text-text-dim uppercase">
-                    Links
+                    {t.links}
                   </span>
                   <div className="mt-4 flex flex-col gap-3">
                     {project.liveUrl && (
-                      <Button
-                        asChild
-                        variant="text"
-                        className="justify-start text-sm"
-                      >
+                      <Button asChild variant="text" className="justify-start text-sm">
                         <Link href={project.liveUrl} target="_blank">
-                          Live demo
+                          {t.liveDemo}
                           <ArrowUpRight size={12} strokeWidth={2.5} />
                         </Link>
                       </Button>
                     )}
-                    <Button
-                      asChild
-                      variant="text"
-                      className="justify-start text-sm"
-                    >
+                    <Button asChild variant="text" className="justify-start text-sm">
                       <Link href={project.repoUrl} target="_blank">
-                        Source on GitHub
+                        {t.sourceGithub}
                         <ArrowUpRight size={12} strokeWidth={2.5} />
                       </Link>
                     </Button>
@@ -222,31 +215,31 @@ export function ProjectDetail({
         <div className="mx-auto flex max-w-[1180px] flex-wrap items-center justify-between gap-4 px-6">
           {prevProject ? (
             <Button asChild variant="outline" size="cta">
-              <Link href={`/projects/${prevProject.slug}`}>
+              <Link href={`${home}/projects/${prevProject.slug}`}>
                 <ArrowLeft size={14} strokeWidth={2.5} />
-                Previous
+                {t.previous}
               </Link>
             </Button>
           ) : (
             <Button asChild variant="outline" size="cta">
-              <Link href="/#projects">
+              <Link href={`${home}#projects`}>
                 <ArrowLeft size={14} strokeWidth={2.5} />
-                All projects
+                {t.allProjects}
               </Link>
             </Button>
           )}
 
           {nextProject ? (
             <Button asChild variant="outline" size="cta">
-              <Link href={`/projects/${nextProject.slug}`}>
-                Next: {nextProject.name}
+              <Link href={`${home}/projects/${nextProject.slug}`}>
+                {t.next} {nextProject.name}
                 <ArrowRight size={14} strokeWidth={2.5} />
               </Link>
             </Button>
           ) : (
             <Button asChild variant="outline" size="cta">
-              <Link href="/#contact">
-                Get in touch
+              <Link href={`${home}#contact`}>
+                {t.getInTouch}
                 <ArrowRight size={14} strokeWidth={2.5} />
               </Link>
             </Button>

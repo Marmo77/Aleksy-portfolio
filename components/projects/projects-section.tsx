@@ -1,11 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { site } from "@/data/site";
+import { useSite } from "@/components/i18n/site-provider";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/shared/reveal";
 import { ProjectRow } from "@/components/projects/project-row";
 
 export function ProjectsSection() {
+  const site = useSite();
   const { projects } = site;
 
   return (

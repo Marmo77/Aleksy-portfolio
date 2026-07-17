@@ -1,10 +1,13 @@
-import { site } from "@/data/site";
+"use client";
+
+import { useSite } from "@/components/i18n/site-provider";
 import { Reveal } from "@/components/shared/reveal";
 import { Surface } from "@/components/shared/surface";
 import { ContactForm } from "@/components/contact/contact-form";
 import { ContactRow } from "@/components/contact/contact-row";
 
 export function ContactSection() {
+  const site = useSite();
   return (
     <section id="contact" className="py-28">
       <div className="mx-auto max-w-[1180px] px-6">
@@ -30,7 +33,7 @@ export function ContactSection() {
           <Reveal delay={0.08}>
             <Surface className="p-8 sm:p-10 h-full">
               <h3 className="font-display text-xl font-semibold">
-                Other ways to reach me
+                {site.ui.contactForm.otherWays}
               </h3>
               <div className="mt-2 flex flex-col">
                 {site.contact.rows.map((row, i) => (

@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/site";
+import { useSite, useLocale } from "@/components/i18n/site-provider";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/shared/reveal";
@@ -15,9 +18,12 @@ export function ProjectRow({
   project: Project;
   reverse: boolean;
 }) {
+  const site = useSite();
+  const locale = useLocale();
+  const detailHref = `/${locale}/projects/${project.slug}`;
   const pillLabel = project.featured
-    ? "FEATURED · MOST COMPLEX BUILD"
-    : project.tag;
+    ? site.projects.featuredLabel
+    : site.projects.tagLabels[project.tag];
   const pillVariant = project.featured ? "amber" : "mint";
 
   return (
@@ -29,7 +35,7 @@ export function ProjectRow({
     >
       <div className="relative aspect-[4/2.75] w-full overflow-hidden rounded-[22px] border border-border bg-card-bg md:flex-[0_0_52%]">
         {project.thumbnail ? (
-          <Link className="group absolute inset-0" href={`/projects/${project.slug}`}>
+          <Link className="group absolute inset-0" href={detailHref}>
             <Image
               src={project.thumbnail}
               alt={`${project.name} — screenshot`}
@@ -75,15 +81,15 @@ export function ProjectRow({
         </p>
         <div className="mt-6 flex flex-wrap items-center gap-5">
           <Button asChild size="cta">
-            <Link href={`/projects/${project.slug}`}>
-              Show more details
+            <Link href={detailHref}>
+              {site.ui.projectCard.details}
               <ArrowRight size={14} strokeWidth={2.5} />
             </Link>
           </Button>
           {project.liveUrl && (
             <Button asChild variant="text">
               <Link href={project.liveUrl} target="_blank">
-                Live demo
+                {site.ui.projectCard.liveDemo}
                 <ArrowUpRight size={13} strokeWidth={2.5} />
               </Link>
             </Button>
@@ -91,7 +97,7 @@ export function ProjectRow({
           <Button asChild variant="text" className="text-text-muted">
             <Link href={project.repoUrl} target="_blank">
               <GithubIcon size={14} />
-              Source
+              {site.ui.projectCard.source}
             </Link>
           </Button>
         </div>

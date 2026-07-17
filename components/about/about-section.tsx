@@ -1,8 +1,11 @@
-import { site } from "@/data/site";
+"use client";
+
+import { useSite } from "@/components/i18n/site-provider";
 import { Reveal } from "@/components/shared/reveal";
 import { JourneyTimeline } from "@/components/about/journey-timeline";
 
 export function AboutSection() {
+  const site = useSite();
   return (
     <section id="about" className="py-28">
       <div className="mx-auto grid max-w-[1180px] gap-16 px-6 lg:grid-cols-[0.9fr_1.1fr]">

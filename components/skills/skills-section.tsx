@@ -1,10 +1,13 @@
-import { site } from "@/data/site";
+"use client";
+
+import { useSite } from "@/components/i18n/site-provider";
 import { Reveal } from "@/components/shared/reveal";
 import { SkillCardFrontend } from "@/components/skills/skill-card-frontend";
 import { SkillCardBackend } from "@/components/skills/skill-card-backend";
 import { SkillCardExcel } from "@/components/skills/skill-card-excel";
 
 export function SkillsSection() {
+  const site = useSite();
   const [frontend, backend, excel] = site.skills.cards;
 
   return (

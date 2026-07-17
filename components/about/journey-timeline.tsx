@@ -1,6 +1,9 @@
-import { site } from "@/data/site";
+"use client";
+
+import { useSite } from "@/components/i18n/site-provider";
 
 export function JourneyTimeline() {
+  const site = useSite();
   return (
     <div>
       <span className="font-mono text-xs tracking-[0.14em] text-text-dim uppercase">

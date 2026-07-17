@@ -1,6 +1,9 @@
-import { site } from "@/data/site";
+"use client";
+
+import { useSite } from "@/components/i18n/site-provider";
 
 function MarqueeRow() {
+  const site = useSite();
   return (
     <>
       {site.hero.marqueeItems.map((item, i) => (

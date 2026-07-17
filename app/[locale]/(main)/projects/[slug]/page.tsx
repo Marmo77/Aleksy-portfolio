@@ -1,29 +1,38 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { site } from "@/data/site";
+import { getSite } from "@/data/site";
+import { isLocale } from "@/lib/i18n";
+import { hreflangAlternates } from "@/lib/seo";
 import { ProjectDetail } from "@/components/projects/project-detail";
 
 export function generateStaticParams() {
-  return site.projects.items.map((project) => ({ slug: project.slug }));
+  // Slugs are locale-independent; Next combines these with the [locale] params.
+  return getSite("en").projects.items.map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  const project = site.projects.items.find((p) => p.slug === slug);
+  const { locale, slug } = await params;
+  if (!isLocale(locale)) return {};
 
+  const site = getSite(locale);
+  const project = site.projects.items.find((p) => p.slug === slug);
   if (!project) return {};
 
-  const path = `/projects/${project.slug}`;
+  const subpath = `/projects/${project.slug}`;
+  const path = `/${locale}${subpath}`;
 
   return {
     title: project.name,
     description: project.detailTagline,
     keywords: [project.name, ...project.techStack, site.fullName],
-    alternates: { canonical: path },
+    alternates: {
+      canonical: path,
+      languages: hreflangAlternates(subpath),
+    },
     openGraph: {
       type: "article",
       title: `${project.name} — ${site.fullName}`,
@@ -41,12 +50,14 @@ export async function generateMetadata({
 export default async function ProjectPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  if (!isLocale(locale)) notFound();
+
+  const site = getSite(locale);
   const items = site.projects.items;
   const index = items.findIndex((p) => p.slug === slug);
-
   if (index === -1) notFound();
 
   const project = items[index];
@@ -54,6 +65,12 @@ export default async function ProjectPage({
   const nextProject = index < items.length - 1 ? items[index + 1] : null;
 
   return (
-    <ProjectDetail project={project} prevProject={prevProject} nextProject={nextProject} />
+    <ProjectDetail
+      site={site}
+      locale={locale}
+      project={project}
+      prevProject={prevProject}
+      nextProject={nextProject}
+    />
   );
 }
