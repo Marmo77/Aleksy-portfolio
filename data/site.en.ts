@@ -230,11 +230,11 @@ export const siteEn = {
 
   agency: {
     sectionLabel: "04 - Beyond the code",
-    heading: "I run a small web agency - AD.digital.",
+    heading: "I run a small web agency - ADdigital.",
     paragraph:
       "Alongside university and my own projects, I design and build complete web presences for local businesses around Szczecin - restaurants, insurance agencies, car services, furniture makers. I handle the whole process myself, end to end.",
-    ctaLabel: "Visit AD.digital",
-    ctaUrl: "https://addigital.vercel.app/",
+    ctaLabel: "Visit ADdigital",
+    ctaUrl: "https://addigital.pl",
     services: [
       {
         icon: "webdev",
@@ -340,7 +340,7 @@ export const siteEn = {
       },
       {
         slug: "ad-digital",
-        name: "AD.digital",
+        name: "ADdigital",
         tag: "LIVE",
         monogram: "AD",
         thumbnail: "/screenshots/addigital.webp",
@@ -350,7 +350,7 @@ export const siteEn = {
           "The marketing site for my own small web agency - built for speed and conversion, with a portfolio grid, animated hero, and a quote-request flow for local businesses.",
         overview: [
           "I run a small web agency on the side, building sites for local businesses around Goleniów, Szczecin, Stargard and Nowogard. This is its own storefront - it has to load fast, read clearly on a phone, and turn a visit into a message within a few seconds of arriving.",
-          'It doubles as a portfolio in its own right: the "Realizations" section links out to real client sites, including the restaurant mockup and car-service site also shown on this page.',
+          'It doubles as a portfolio in its own right: the "Realizations" section links out to real client sites, including the restaurant and car-service site also shown on this page.',
         ],
         keyFeatures: [
           {
@@ -375,7 +375,7 @@ export const siteEn = {
           },
         ],
         techStack: ["Vite", "Tailwind CSS", "Framer Motion"],
-        liveUrl: "https://addigital.vercel.app/",
+        liveUrl: "https://addigital.pl",
         repoUrl: "https://github.com/Marmo77/AD-digital-website",
         detailTagline:
           "The marketing site for my own small web agency - designed and built to convert local business owners into clients, not just to look good.",
@@ -383,8 +383,8 @@ export const siteEn = {
         detailOverviewHeading: "A site that has to sell, not just exist",
       },
       {
-        slug: "restaurant-mockup",
-        name: "Restaurant Mockup",
+        slug: "burgerszczecin",
+        name: "Burger Restaurant",
         tag: "LIVE",
         monogram: "RM",
         thumbnail: "/screenshots/bistroburger.webp",
@@ -505,7 +505,7 @@ export const siteEn = {
       },
       {
         slug: "nova-ubezpieczenia",
-        name: "Nova Ubezpieczenia",
+        name: "Nova Insurance",
         tag: "LIVE",
         monogram: "NU",
         thumbnail: "/screenshots/novaubezpieczenia.webp",

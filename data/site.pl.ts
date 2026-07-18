@@ -148,7 +148,7 @@ export const sitePl: SiteContent = {
         id: "excel",
         title: "Excel i produktywność",
         description:
-          "Certyfikowana umiejętność, która stoi za powołaniem do Team Poland MOS 2026 - przy pracy dla klientów swobodnie korzystam też z Photoshopa i Figmy.",
+          "Certyfikowana umiejętność, które są dowodem Team Poland MOS 2026 - przy pracy dla klientów swobodnie korzystam też z Photoshopa i innych narzędzi aby lepiej pokazać wizję oraz statystyki strony.",
         badges: ["Excel Expert", "Adobe Photoshop", "Figma"],
         highlightBadge: "Excel Expert",
         stat: {
@@ -161,7 +161,7 @@ export const sitePl: SiteContent = {
 
   evidence: {
     sectionLabel: "03 - Dowody",
-    heading: "Konkrety, nie przymiotniki.",
+    heading: "Konkretne liczby.",
     githubHandle: "github.com/Marmo77",
     stats: [
       {
@@ -229,7 +229,7 @@ export const sitePl: SiteContent = {
     heading: "Prowadzę małą agencję webową - ADdigital.",
     paragraph:
       "Obok studiów i własnych projektów projektuję i tworzę kompletne strony internetowe dla lokalnych firm w okolicach Szczecina - restauracji, agencji ubezpieczeniowych, serwisów samochodowych czy producentów mebli. Cały proces prowadzę sam, od początku do końca.",
-    ctaLabel: "Odwiedź AD.digital",
+    ctaLabel: "Odwiedź ADdigital",
     ctaUrl: "https://addigital.pl",
     services: [
       {
@@ -336,7 +336,7 @@ export const sitePl: SiteContent = {
       },
       {
         slug: "ad-digital",
-        name: "AD.digital",
+        name: "ADdigital",
         tag: "LIVE",
         monogram: "AD",
         thumbnail: "/screenshots/addigital.webp",
@@ -371,7 +371,7 @@ export const sitePl: SiteContent = {
           },
         ],
         techStack: ["Vite", "Tailwind CSS", "Framer Motion"],
-        liveUrl: "https://addigital.vercel.app/",
+        liveUrl: "https://addigital.pl",
         repoUrl: "https://github.com/Marmo77/AD-digital-website",
         detailTagline:
           "Strona mojej własnej małej agencji webowej - zaprojektowana i zbudowana tak, żeby zamieniać właścicieli lokalnych firm w klientów, a nie tylko dobrze wyglądać.",
@@ -379,8 +379,8 @@ export const sitePl: SiteContent = {
         detailOverviewHeading: "Strona, która ma sprzedawać, nie tylko istnieć",
       },
       {
-        slug: "restaurant-mockup",
-        name: "Restaurant Mockup",
+        slug: "burgerszczecin",
+        name: "Burger Szczecin",
         tag: "LIVE",
         monogram: "RM",
         thumbnail: "/screenshots/bistroburger.webp",
