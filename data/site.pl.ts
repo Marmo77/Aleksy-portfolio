@@ -44,7 +44,7 @@ export const sitePl: SiteContent = {
   },
 
   about: {
-    sectionLabel: "01 — O mnie",
+    sectionLabel: "01 - O mnie",
     heading: "Liczą się projekty, nie CV.",
     paragraphs: [
       "Jestem Aleksy - programista z Polski (19 lat). Właśnie skończyłem technikum o profilu programistycznym, gdzie razem z maturą zdałem oba egzaminy zawodowe (INF.03, INF.04) - 100%.",
@@ -54,30 +54,30 @@ export const sitePl: SiteContent = {
     journeyLabel: "Moja droga do tej pory",
     journey: [
       {
-        title: "Początki — samouk",
+        title: "Początki - samouk",
         description:
-          "Zacząłem samodzielnie budować strony — od HTML/CSS, przez Reacta, po programowanie obiektowe w Pythonie, żeby ogarnąć również logikę backendu.",
+          "Zacząłem samodzielnie budować strony - od HTML/CSS, przez Reacta, po programowanie obiektowe w Pythonie, żeby ogarnąć również logikę backendu.",
       },
       {
-        title: "Technikum — technik programista",
+        title: "Technikum - technik programista",
         period: "2021 – 2026",
         description:
           "Zdane egzaminy zawodowe INF.03 i INF.04 oraz solidne wyniki matury (matematyka 92%, angielski 97%).",
       },
       {
-        title: "Praktyki IT — Rimini, Włochy",
+        title: "Praktyki IT - Rimini, Włochy",
         description:
-          "Miesięczny staż zagraniczny w ramach programu Europass — praca w środowisku IT za granicą.",
+          "Miesięczny staż zagraniczny w ramach programu Europass - praca w środowisku IT za granicą.",
       },
       {
-        title: "Team Poland — MOS 2026",
+        title: "Team Poland - MOS 2026",
         description:
           "Reprezentowanie Polski na Mistrzostwach Świata Microsoft Office Specialist (w USA) w kategorii Excel + (kilka zdanych certyfikatów Excel Expert).",
         interactive: true,
         interactiveURL: "https://openedg.pl/mos-2026",
       },
       {
-        title: "Start studiów — informatyka",
+        title: "Start studiów - informatyka",
         period: "Październik 2026",
         description:
           "Rozpoczynam studia informatyczne, a równolegle szukam stażu lub współpracy, żeby dalej realizować prawdziwe projekty obok nauki.",
@@ -86,16 +86,16 @@ export const sitePl: SiteContent = {
   },
 
   skills: {
-    sectionLabel: "02 — Stack",
+    sectionLabel: "02 - Stack",
     heading: "Czym naprawdę buduję.",
     subheading:
-      "Żadnej rozdmuchanej listy — to dokładnie ten stack, który stoi za każdym projektem na tej stronie.",
+      "Żadnej rozdmuchanej listy - to dokładnie ten stack, który stoi za każdym projektem na tej stronie.",
     cards: [
       {
         id: "frontend",
         title: "Frontend",
         description:
-          "Tu spędzam najwięcej czasu — interfejsy, które są przemyślane, a nie domyślne. Każdy projekt na tej stronie powstał na dokładnie tej kombinacji.",
+          "Tu spędzam najwięcej czasu - interfejsy, które są przemyślane, a nie domyślne. Każdy projekt na tej stronie powstał na dokładnie tej kombinacji.",
         badges: [
           "React",
           "TypeScript",
@@ -141,14 +141,14 @@ export const sitePl: SiteContent = {
         id: "backend",
         title: "Backend / BaaS",
         description:
-          "Supabase do logowania, bazy danych i przechowywania plików — realnie wykorzystane w projekcie Car Service Dashboard.",
+          "Supabase do logowania, bazy danych i przechowywania plików - realnie wykorzystane w projekcie Car Service Dashboard.",
         badges: ["Supabase", "PostgreSQL", "OAuth", "Python (OOP)"],
       },
       {
         id: "excel",
         title: "Excel i produktywność",
         description:
-          "Certyfikowana umiejętność, która stoi za powołaniem do Team Poland MOS 2026 — przy pracy dla klientów swobodnie korzystam też z Photoshopa i Figmy.",
+          "Certyfikowana umiejętność, która stoi za powołaniem do Team Poland MOS 2026 - przy pracy dla klientów swobodnie korzystam też z Photoshopa i Figmy.",
         badges: ["Excel Expert", "Adobe Photoshop", "Figma"],
         highlightBadge: "Excel Expert",
         stat: {
@@ -160,7 +160,7 @@ export const sitePl: SiteContent = {
   },
 
   evidence: {
-    sectionLabel: "03 — Dowody",
+    sectionLabel: "03 - Dowody",
     heading: "Konkrety, nie przymiotniki.",
     githubHandle: "github.com/Marmo77",
     stats: [
@@ -168,20 +168,20 @@ export const sitePl: SiteContent = {
         id: "contributions",
         value: "1,141",
         description:
-          "Commity na GitHubie z ostatniego roku — regularnie, a nie jednorazowy zryw.",
+          "Commity na GitHubie z ostatniego roku - regularnie, a nie jednorazowy zryw.",
         span: 3,
         hero: true,
       },
       {
         id: "math",
         value: "92%",
-        description: "Wynik matury — matematyka",
+        description: "Wynik matury - matematyka",
         span: 3,
       },
       {
         id: "english",
         value: "97%",
-        description: "Wynik matury — angielski (pisemny)",
+        description: "Wynik matury - angielski (pisemny)",
         span: 3,
       },
       {
@@ -206,13 +206,13 @@ export const sitePl: SiteContent = {
       {
         id: "europass",
         title: "Europass",
-        description: "Miesięczny staż IT — Rimini, Włochy",
+        description: "Miesięczny staż IT - Rimini, Włochy",
         span: 2,
       },
       {
         id: "inf",
         title: "INF.03 / INF.04",
-        description: "Krajowe egzaminy zawodowe z programowania — zdane",
+        description: "Krajowe egzaminy zawodowe z programowania - zdane",
         span: 2,
       },
       {
@@ -225,10 +225,10 @@ export const sitePl: SiteContent = {
   },
 
   agency: {
-    sectionLabel: "04 — Poza kodem",
-    heading: "Prowadzę małą agencję webową — ADdigital.",
+    sectionLabel: "04 - Poza kodem",
+    heading: "Prowadzę małą agencję webową - ADdigital.",
     paragraph:
-      "Obok studiów i własnych projektów projektuję i tworzę kompletne strony internetowe dla lokalnych firm w okolicach Szczecina — restauracji, agencji ubezpieczeniowych, serwisów samochodowych czy producentów mebli. Cały proces prowadzę sam, od początku do końca.",
+      "Obok studiów i własnych projektów projektuję i tworzę kompletne strony internetowe dla lokalnych firm w okolicach Szczecina - restauracji, agencji ubezpieczeniowych, serwisów samochodowych czy producentów mebli. Cały proces prowadzę sam, od początku do końca.",
     ctaLabel: "Odwiedź AD.digital",
     ctaUrl: "https://addigital.pl",
     services: [
@@ -254,7 +254,7 @@ export const sitePl: SiteContent = {
         icon: "support",
         title: "Bieżące wsparcie",
         description:
-          "Klienci piszą do mnie bezpośrednio w sprawie zmian i aktualizacji — bez systemu zgłoszeń.",
+          "Klienci piszą do mnie bezpośrednio w sprawie zmian i aktualizacji - bez systemu zgłoszeń.",
       },
     ],
     stats: [
@@ -265,10 +265,10 @@ export const sitePl: SiteContent = {
   },
 
   projects: {
-    sectionLabel: "05 — Projekty",
+    sectionLabel: "05 - Projekty",
     heading: "Wybrane realizacje.",
     subheading:
-      "Sześć konkretnych projektów — od stron marketingowych po panel administracyjny z pełnym uwierzytelnianiem. Każdy z linkiem do szczegółów i kodu źródłowego.",
+      "Sześć konkretnych projektów - od stron marketingowych po panel administracyjny z pełnym uwierzytelnianiem. Każdy z linkiem do szczegółów i kodu źródłowego.",
     viewAllLabel: "Zobacz wszystkie repozytoria na GitHubie",
     viewAllUrl: "https://github.com/Marmo77",
     featuredLabel: "WYRÓŻNIONY · NAJBARDZIEJ ZŁOŻONY PROJEKT",
@@ -282,10 +282,10 @@ export const sitePl: SiteContent = {
         monogram: "CSD",
         homeBadges: ["Supabase", "PostgreSQL", "OAuth", "Next.js"],
         summary:
-          "W pełni ręcznie napisany panel administracyjny w stylu SaaS dla serwisu samochodowego — CRUD pojazdów i rezerwacji, logowanie OAuth oparte na rolach oraz relacyjny model danych na Supabase Postgres. Mój dotychczas najbardziej zaawansowany projekt w obszarze logowania, logiki bazy danych i kontroli dostępu.",
+          "W pełni ręcznie napisany panel administracyjny w stylu SaaS dla serwisu samochodowego - CRUD pojazdów i rezerwacji, logowanie OAuth oparte na rolach oraz relacyjny model danych na Supabase Postgres. Mój dotychczas najbardziej zaawansowany projekt w obszarze logowania, logiki bazy danych i kontroli dostępu.",
         overview: [
-          "Wszystko, co robiłem wcześniej, było mocno frontendowe: landing page, makieta, menu. To pierwszy projekt, w którym musiałem zaprojektować prawdziwy model danych — pojazdy, usługi, rezerwacje i konta pracowników — i zadbać, żeby interfejs, baza danych i warstwa logowania były ze sobą spójne.",
-          "To panel CRUD w stylu SaaS dla serwisu samochodowego: pracownicy logują się, dodają i aktualizują pojazdy, zarządzają zleceniami serwisowymi i mają wszystko w jednym widoku administracyjnym. Wciąż jest w rozwoju, co celowo zostawiłem widoczne — to uczciwszy obraz pracy w toku niż projekt pokazany dopiero po ukończeniu.",
+          "Wszystko, co robiłem wcześniej, było mocno frontendowe: landing page, makieta, menu. To pierwszy projekt, w którym musiałem zaprojektować prawdziwy model danych - pojazdy, usługi, rezerwacje i konta pracowników - i zadbać, żeby interfejs, baza danych i warstwa logowania były ze sobą spójne.",
+          "To panel CRUD w stylu SaaS dla serwisu samochodowego: pracownicy logują się, dodają i aktualizują pojazdy, zarządzają zleceniami serwisowymi i mają wszystko w jednym widoku administracyjnym. Wciąż jest w rozwoju, co celowo zostawiłem widoczne - to uczciwszy obraz pracy w toku niż projekt pokazany dopiero po ukończeniu.",
         ],
         keyFeatures: [
           {
@@ -315,7 +315,7 @@ export const sitePl: SiteContent = {
           },
         ],
         whatsNext:
-          "Kończę jeszcze obsługę konfliktów rezerwacji i widoki raportowe. Gdy zestaw funkcji się ustabilizuje, to również pierwszy projekt, który zamierzam skonteneryzować — i mój główny powód, żeby nauczyć się Dockera.",
+          "Kończę jeszcze obsługę konfliktów rezerwacji i widoki raportowe. Gdy zestaw funkcji się ustabilizuje, to również pierwszy projekt, który zamierzam skonteneryzować - i mój główny powód, żeby nauczyć się Dockera.",
         techStack: [
           "Next.js",
           "TypeScript",
@@ -327,7 +327,7 @@ export const sitePl: SiteContent = {
         ],
         repoUrl: "https://github.com/Marmo77/car_service_dashboard",
         detailTagline:
-          "Ręcznie napisany panel administracyjny w stylu SaaS dla serwisu samochodowego — pełny CRUD pojazdów i rezerwacji, logowanie oparte na rolach i relacyjny schemat Postgres za każdym ekranem. To projekt z największą liczbą godzin, commitów i najtrudniejszych problemów, z jakimi musiałem się zmierzyć.",
+          "Ręcznie napisany panel administracyjny w stylu SaaS dla serwisu samochodowego - pełny CRUD pojazdów i rezerwacji, logowanie oparte na rolach i relacyjny schemat Postgres za każdym ekranem. To projekt z największą liczbą godzin, commitów i najtrudniejszych problemów, z jakimi musiałem się zmierzyć.",
         detailBadges: [
           { label: "W aktywnym rozwoju", variant: "amber" },
           { label: "Najbardziej złożony projekt", variant: "mint" },
@@ -343,9 +343,9 @@ export const sitePl: SiteContent = {
         gif: "/gifs/addigital.gif",
         homeBadges: ["Vite", "Tailwind CSS", "Framer Motion"],
         summary:
-          "Strona mojej własnej małej agencji webowej — zbudowana pod szybkość i konwersję, z galerią realizacji, animowanym hero i formularzem wyceny dla lokalnych firm.",
+          "Strona mojej własnej małej agencji webowej - zbudowana pod szybkość i konwersję, z galerią realizacji, animowanym hero i formularzem wyceny dla lokalnych firm.",
         overview: [
-          "Prowadzę małą agencję webową i tworzę strony dla lokalnych firm w okolicach Goleniowa, Szczecina, Stargardu i Nowogardu. To jej własna witryna — musi ładować się szybko, czytelnie wyglądać na telefonie i zamienić wizytę w wiadomość w kilka sekund od wejścia.",
+          "Prowadzę małą agencję webową i tworzę strony dla lokalnych firm w okolicach Goleniowa, Szczecina, Stargardu i Nowogardu. To jej własna witryna - musi ładować się szybko, czytelnie wyglądać na telefonie i zamienić wizytę w wiadomość w kilka sekund od wejścia.",
           "Pełni też rolę portfolio: sekcja „Realizacje” prowadzi do prawdziwych stron klientów, w tym makiety restauracji i strony serwisu samochodowego pokazanych również tutaj.",
         ],
         keyFeatures: [
@@ -374,7 +374,7 @@ export const sitePl: SiteContent = {
         liveUrl: "https://addigital.vercel.app/",
         repoUrl: "https://github.com/Marmo77/AD-digital-website",
         detailTagline:
-          "Strona mojej własnej małej agencji webowej — zaprojektowana i zbudowana tak, żeby zamieniać właścicieli lokalnych firm w klientów, a nie tylko dobrze wyglądać.",
+          "Strona mojej własnej małej agencji webowej - zaprojektowana i zbudowana tak, żeby zamieniać właścicieli lokalnych firm w klientów, a nie tylko dobrze wyglądać.",
         detailBadges: [{ label: "Online", variant: "mint" }],
         detailOverviewHeading: "Strona, która ma sprzedawać, nie tylko istnieć",
       },
@@ -387,7 +387,7 @@ export const sitePl: SiteContent = {
         gif: "/gifs/bistroburger.gif",
         homeBadges: ["Vite", "Rezerwacje", "Responsywność"],
         summary:
-          "Koncepcyjna strona burgerowni typu gastropub — prezentacja menu i ścieżka rezerwacji stolika, zaprojektowana tak, żeby była lokalna, apetyczna i prosta w rezerwacji.",
+          "Koncepcyjna strona burgerowni typu gastropub - prezentacja menu i ścieżka rezerwacji stolika, zaprojektowana tak, żeby była lokalna, apetyczna i prosta w rezerwacji.",
         overview: [
           "To był brief koncepcyjny: gastropub z rzemieślniczym piwem i autorskimi burgerami, potrzebujący strony równie ciepłej i konkretnej jak samo jedzenie, a nie generycznego szablonu restauracji.",
           "Projekt mocno stawia na duże zdjęcia, wyrazistą typografię menu i ścieżkę rezerwacji, która nigdy nie każe szukać, jak zarezerwować stolik.",
@@ -413,7 +413,7 @@ export const sitePl: SiteContent = {
         liveUrl: "https://www.burgerszczecin.pl/",
         repoUrl: "https://github.com/Marmo77/Restaurant-burger-website",
         detailTagline:
-          "Koncepcyjna strona burgerowni typu gastropub — zbudowana wokół jednego zadania: sprawić, żeby ktoś zgłodniał na tyle, by zarezerwować stolik w niecałą minutę.",
+          "Koncepcyjna strona burgerowni typu gastropub - zbudowana wokół jednego zadania: sprawić, żeby ktoś zgłodniał na tyle, by zarezerwować stolik w niecałą minutę.",
         detailBadges: [{ label: "Online", variant: "mint" }],
         detailOverviewHeading: "Projektowanie pod apetyt, nie tylko pod układ",
       },
@@ -426,9 +426,9 @@ export const sitePl: SiteContent = {
         gif: "/gifs/nordcar.gif",
         homeBadges: ["Vite", "Tailwind CSS", "Strona firmowa"],
         summary:
-          "Makieta strony firmowej serwisu samochodowego — lista usług, przyciski rezerwacji i czysty, budujący zaufanie układ dla lokalnych klientów.",
+          "Makieta strony firmowej serwisu samochodowego - lista usług, przyciski rezerwacji i czysty, budujący zaufanie układ dla lokalnych klientów.",
         overview: [
-          "Klienci serwisów samochodowych chcą dwóch rzeczy od razu: dowodu, że warsztat jest kompetentny, i możliwości rezerwacji bez dzwonienia. Ta makieta opiera się na czytelnej liście usług, bezpośrednich przyciskach rezerwacji i układzie, który wygląda solidnie, a nie prowizorycznie — jako uzupełnienie panelu Car Service Dashboard.",
+          "Klienci serwisów samochodowych chcą dwóch rzeczy od razu: dowodu, że warsztat jest kompetentny, i możliwości rezerwacji bez dzwonienia. Ta makieta opiera się na czytelnej liście usług, bezpośrednich przyciskach rezerwacji i układzie, który wygląda solidnie, a nie prowizorycznie - jako uzupełnienie panelu Car Service Dashboard.",
         ],
         keyFeatures: [
           {
@@ -451,7 +451,7 @@ export const sitePl: SiteContent = {
         liveUrl: "https://nord-car.pl",
         repoUrl: "https://github.com/Marmo77/Carservice-website",
         detailTagline:
-          "Makieta strony firmowej serwisu samochodowego — zbudowana tak, żeby warsztat online budził takie samo zaufanie, jak na miejscu.",
+          "Makieta strony firmowej serwisu samochodowego - zbudowana tak, żeby warsztat online budził takie samo zaufanie, jak na miejscu.",
         detailBadges: [{ label: "Online", variant: "mint" }],
         detailOverviewHeading: "Zaufanie budowane układem",
       },
@@ -464,16 +464,16 @@ export const sitePl: SiteContent = {
         gif: "/gifs/meblexszczecin.gif",
         homeBadges: ["Vite", "Tailwind CSS", "Galeria realizacji"],
         summary:
-          "Strona producenta mebli na wymiar ze Szczecina — wizualne portfolio realizacji z prostą ścieżką do zapytania o wycenę.",
+          "Strona producenta mebli na wymiar ze Szczecina - wizualne portfolio realizacji z prostą ścieżką do zapytania o wycenę.",
         overview: [
-          "Meblex tworzy meble na wymiar — kuchnie, szafy, zabudowy komercyjne — gdzie praca sama się broni, gdy tylko można ją zobaczyć. Zadaniem strony jest wyeksponować to rzemiosło i sprawić, żeby zapytanie o wycenę było banalnie proste.",
+          "Meblex tworzy meble na wymiar - kuchnie, szafy, zabudowy komercyjne - gdzie praca sama się broni, gdy tylko można ją zobaczyć. Zadaniem strony jest wyeksponować to rzemiosło i sprawić, żeby zapytanie o wycenę było banalnie proste.",
           "Strona opiera się na dużej galerii zdjęć gotowych realizacji, czytelnym podziale oferty i ścieżce kontaktu nastawionej na jedno: zamianę przeglądania w zapytanie.",
         ],
         keyFeatures: [
           {
             title: "Galeria realizacji",
             description:
-              "oparta na zdjęciach prezentacja gotowych mebli — najsilniejsze narzędzie sprzedaży, jakie ma producent mebli.",
+              "oparta na zdjęciach prezentacja gotowych mebli - najsilniejsze narzędzie sprzedaży, jakie ma producent mebli.",
           },
           {
             title: "Prosta ścieżka do wyceny",
@@ -495,7 +495,7 @@ export const sitePl: SiteContent = {
         liveUrl: "https://www.meblex-szczecin.pl/",
         repoUrl: "https://github.com/Marmo77/CustomFurnitures-website",
         detailTagline:
-          "Strona producenta mebli na wymiar ze Szczecina — zbudowana tak, żeby rzemiosło broniło się samo, a zapytanie o wycenę było banalnie proste.",
+          "Strona producenta mebli na wymiar ze Szczecina - zbudowana tak, żeby rzemiosło broniło się samo, a zapytanie o wycenę było banalnie proste.",
         detailBadges: [{ label: "Online", variant: "mint" }],
         detailOverviewHeading: "Niech praca broni się sama",
       },
@@ -508,7 +508,7 @@ export const sitePl: SiteContent = {
         gif: "/gifs/novaubezpieczenia.gif",
         homeBadges: ["Vite", "Tailwind CSS", "Pozyskiwanie klientów"],
         summary:
-          "Strona agencji ubezpieczeniowej — czytelna prezentacja rodzajów ubezpieczeń i budujący zaufanie układ, który zamienia odwiedzających w zapytania o ofertę.",
+          "Strona agencji ubezpieczeniowej - czytelna prezentacja rodzajów ubezpieczeń i budujący zaufanie układ, który zamienia odwiedzających w zapytania o ofertę.",
         overview: [
           "Ubezpieczenia to zakup oparty na zaufaniu: ludzie chcą wiedzieć, że mają do czynienia z kimś wiarygodnym, zanim zostawią swoje dane. Nova Ubezpieczenia potrzebowała strony, która wygląda solidnie i uspokajająco, a jednocześnie sprawia, że zapytanie o ofertę jest proste.",
           "Strona porządkuje ubezpieczenia w czytelne kategorie, trzyma przycisk kontaktu i wyceny w zasięgu na każdym etapie przewijania i zachowuje profesjonalny, spokojny ton zamiast nachalnej sprzedaży.",
@@ -527,7 +527,7 @@ export const sitePl: SiteContent = {
           {
             title: "Układ budujący zaufanie",
             description:
-              "czysta struktura, spokojny ton i widoczne dane kontaktowe — sygnały wiarygodności, których szuka klient ubezpieczeniowy.",
+              "czysta struktura, spokojny ton i widoczne dane kontaktowe - sygnały wiarygodności, których szuka klient ubezpieczeniowy.",
           },
           {
             title: "W pełni responsywna",
@@ -539,7 +539,7 @@ export const sitePl: SiteContent = {
         liveUrl: "https://www.nova-ubezpieczenia.pl/",
         repoUrl: "https://github.com/Marmo77/Insurance-company-website",
         detailTagline:
-          "Strona agencji ubezpieczeniowej — zbudowana tak, żeby wyglądała wiarygodnie i uspokajająco, a jednocześnie sprawiała, że zapytanie o ofertę jest proste.",
+          "Strona agencji ubezpieczeniowej - zbudowana tak, żeby wyglądała wiarygodnie i uspokajająco, a jednocześnie sprawiała, że zapytanie o ofertę jest proste.",
         detailBadges: [{ label: "Online", variant: "mint" }],
         detailOverviewHeading: "Najpierw zaufanie, potem wycena",
       },
@@ -547,7 +547,7 @@ export const sitePl: SiteContent = {
   },
 
   contact: {
-    sectionLabel: "06 — Kontakt",
+    sectionLabel: "06 - Kontakt",
     heading: "Zbudujmy coś razem.",
     subheading:
       "Otwarty na staże, pracę na część etatu i każdą współpracę, która pozwoli mi dalej tworzyć realne projekty. Odpiszę w ciągu doby.",
@@ -562,7 +562,7 @@ export const sitePl: SiteContent = {
       privacyUrl: "/privacy",
       submitLabel: "Wyślij wiadomość",
       successNote:
-        "Twój program pocztowy powinien otworzyć się za chwilę — pamiętaj, żeby tam też kliknąć „wyślij”.",
+        "Twój program pocztowy powinien otworzyć się za chwilę - pamiętaj, żeby tam też kliknąć „wyślij”.",
     },
     rows: [
       {
@@ -659,7 +659,7 @@ export const sitePl: SiteContent = {
         },
         {
           heading: "Jak są wykorzystywane",
-          body: "Wysłanie formularza otwiera Twój własny program pocztowy z gotową wiadomością zaadresowaną do {email}. Wiadomość dociera do mnie dopiero wtedy, gdy sam ją wyślesz — po drodze nic nie trafia na żaden serwer ani do osób trzecich.",
+          body: "Wysłanie formularza otwiera Twój własny program pocztowy z gotową wiadomością zaadresowaną do {email}. Wiadomość dociera do mnie dopiero wtedy, gdy sam ją wyślesz - po drodze nic nie trafia na żaden serwer ani do osób trzecich.",
         },
         {
           heading: "Bez udostępniania, bez spamu",
