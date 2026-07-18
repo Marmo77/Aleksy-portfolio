@@ -5,12 +5,17 @@ function detectLocale(req: NextRequest): string {
   const cookie = req.cookies.get(LOCALE_COOKIE)?.value;
   if (isLocale(cookie)) return cookie;
 
-  const accept = req.headers.get("accept-language")?.toLowerCase() ?? "";
+  // No language header (many crawlers) → PL-first default.
+  const accept = req.headers.get("accept-language");
+  if (!accept) return defaultLocale;
+
+  // Explicit language: Polish → pl, anything else → en.
   const prefersPolish = accept
+    .toLowerCase()
     .split(",")
     .some((part) => part.trim().startsWith("pl"));
 
-  return prefersPolish ? "pl" : defaultLocale;
+  return prefersPolish ? "pl" : "en";
 }
 
 export function proxy(req: NextRequest) {

@@ -49,7 +49,7 @@ export function EvidenceCard({ stat, delay }: { stat: EvidenceStat; delay: numbe
           <span className="font-mono text-[11px] text-mint">{site.evidence.githubHandle}</span>
           <div>
             <div className="font-display text-[clamp(48px,6vw,72px)] leading-none font-bold">
-              <CountUp value={displayValue} />
+              <CountUp key={displayValue} value={displayValue} />
             </div>
             <div className="mt-3 text-sm text-text-muted">{stat.description}</div>
           </div>
@@ -64,7 +64,7 @@ export function EvidenceCard({ stat, delay }: { stat: EvidenceStat; delay: numbe
         {Icon && <Icon size={16} className="mb-3 text-mint" strokeWidth={2} />}
         {stat.value ? (
           <div className="font-display text-[clamp(28px,3.4vw,40px)] leading-none font-bold">
-            <CountUp value={displayValue} />
+            <CountUp key={displayValue} value={displayValue} />
           </div>
         ) : (
           <div className="font-display text-lg font-semibold">{stat.title}</div>

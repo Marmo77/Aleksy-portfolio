@@ -32,7 +32,7 @@ export function hreflangAlternates(subpath = ""): Record<string, string> {
   return {
     "en-US": `/en${subpath}`,
     "pl-PL": `/pl${subpath}`,
-    "x-default": `/en${subpath}`,
+    "x-default": `/pl${subpath}`,
   };
 }
 

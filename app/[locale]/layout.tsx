@@ -60,11 +60,6 @@ export async function generateMetadata({
       canonical: `/${locale}`,
       languages: hreflangAlternates(""),
     },
-    icons: {
-      icon: "/logo.svg",
-      shortcut: "/logo.svg",
-      apple: "/logo.svg",
-    },
     openGraph: {
       type: "website",
       siteName: "Aleksy Dobrodziej — Developer Portfolio",

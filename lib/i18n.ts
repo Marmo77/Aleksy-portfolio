@@ -1,8 +1,9 @@
 export const locales = ["pl", "en"] as const;
 export type Locale = (typeof locales)[number];
 
-/** Fallback when the browser language isn't Polish and no cookie is set. */
-export const defaultLocale: Locale = "en";
+/** PL-first default: used for requests with no language header (incl. many
+ *  crawlers) and as the hreflang x-default, since the site targets Poland. */
+export const defaultLocale: Locale = "pl";
 
 export const LOCALE_COOKIE = "NEXT_LOCALE";
 
