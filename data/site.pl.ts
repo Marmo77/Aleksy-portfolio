@@ -19,7 +19,7 @@ export const sitePl: SiteContent = {
     paragraph:
       "Projektuję i tworzę prawdziwe, działające aplikacje — od stron marketingowych po panel administracyjny z bazą danych i logowaniem. Jestem samoukiem, a swój postęp mierzę commitami i wdrożonymi funkcjami, a nie stanowiskami. W październiku zaczynam studia informatyczne.",
     stats: [
-      { value: "1,141", label: "commitów rocznie" },
+      { value: "1,141", label: "commitów rocznie", live: true },
       { value: "6", label: "wdrożonych projektów" },
       { value: "🇵🇱", label: "Team Poland · MOS 2026" },
     ],

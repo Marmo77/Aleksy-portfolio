@@ -47,6 +47,8 @@ export interface AgencyService {
 export interface StatItem {
   value: string;
   label: string;
+  /** When true, the value is replaced at runtime by the live GitHub total. */
+  live?: boolean;
 }
 
 export interface DetailBadge {

@@ -29,7 +29,7 @@ export const siteEn = {
     paragraph:
       "I design and build real, working software — from marketing sites to a database-backed admin dashboard with authentication. Self-taught, measuring progress in commits and shipped features rather than job titles, and starting university this October to study IT.",
     stats: [
-      { value: "1,141", label: "contributions / yr" },
+      { value: "1,141", label: "contributions / yr", live: true },
       { value: "6", label: "shipped projects" },
       { value: "🇵🇱", label: "Team Poland · MOS 2026" },
     ] as StatItem[],

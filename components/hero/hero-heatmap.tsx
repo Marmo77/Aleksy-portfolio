@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { useSite } from "@/components/i18n/site-provider";
+import { useContributionsFormatted } from "@/components/shared/contributions";
 
 const WEEKS = 28;
 const DAYS = 7;
@@ -34,34 +35,13 @@ function seededLevels(seed: number) {
 export function HeroHeatmap() {
   const site = useSite();
   const [levels] = React.useState<number[]>(() => seededLevels(site.hero.contributionsLastYear));
-  const [total, setTotal] = React.useState<number>(site.hero.contributionsLastYear);
-
-  React.useEffect(() => {
-    let cancelled = false;
-
-    fetch("/api/github-contributions")
-      .then((res) => {
-        if (!res.ok) throw new Error("bad response");
-        return res.json() as Promise<{ total: number }>;
-      })
-      .then((data) => {
-        if (cancelled || typeof data.total !== "number") return;
-        setTotal(data.total);
-      })
-      .catch(() => {
-        // keep the static fallback total
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+  const total = useContributionsFormatted(site.hero.contributionsLastYear);
 
   return (
     <div className="rounded-2xl border border-border bg-card-bg p-5 pb-[18px] shadow-elevated">
       <div className="mb-4 flex items-center justify-between">
         <span className="font-mono text-xs text-text-muted">
-          {total.toLocaleString("en-US")} {site.ui.heatmap.contributions}
+          {total} {site.ui.heatmap.contributions}
         </span>
         <a
           href={`https://github.com/${site.hero.githubHandle}`}

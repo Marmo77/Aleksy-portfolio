@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useSite } from "@/components/i18n/site-provider";
+import { useContributionsFormatted } from "@/components/shared/contributions";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/shared/reveal";
 import { SpotlightSection } from "@/components/shared/spotlight-section";
@@ -12,6 +13,7 @@ import { HeroMarquee } from "@/components/hero/hero-marquee";
 export function HeroSection() {
   const site = useSite();
   const { hero } = site;
+  const liveContributions = useContributionsFormatted(hero.contributionsLastYear);
   const [headlineStart, headlineGradient] = hero.headline;
 
   return (
@@ -47,7 +49,7 @@ export function HeroSection() {
               {hero.stats.map((stat) => (
                 <div key={stat.label}>
                   <div className="font-display text-[clamp(28px,3.4vw,40px)] leading-none font-bold">
-                    {stat.value}
+                    {stat.live ? liveContributions : stat.value}
                   </div>
                   <div className="mt-1 font-mono text-xs tracking-[0.14em] text-text-dim uppercase">
                     {stat.label}

@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import type { EvidenceStat } from "@/data/site";
 import { useSite } from "@/components/i18n/site-provider";
+import { useContributionsFormatted } from "@/components/shared/contributions";
 import { Surface } from "@/components/shared/surface";
 import { Reveal } from "@/components/shared/reveal";
 import { CountUp } from "@/components/shared/count-up";
@@ -29,6 +30,9 @@ const ICONS: Record<string, React.ComponentType<{ size?: number; className?: str
 
 export function EvidenceCard({ stat, delay }: { stat: EvidenceStat; delay: number }) {
   const site = useSite();
+  const liveContributions = useContributionsFormatted(site.hero.contributionsLastYear);
+  const isLive = stat.id === "contributions";
+  const displayValue = isLive ? liveContributions : stat.value ?? "";
   const Icon = ICONS[stat.id];
   const spanClass = stat.span === 3 ? "md:col-span-3" : "md:col-span-2";
 
@@ -45,7 +49,7 @@ export function EvidenceCard({ stat, delay }: { stat: EvidenceStat; delay: numbe
           <span className="font-mono text-[11px] text-mint">{site.evidence.githubHandle}</span>
           <div>
             <div className="font-display text-[clamp(48px,6vw,72px)] leading-none font-bold">
-              <CountUp value={stat.value ?? ""} />
+              <CountUp value={displayValue} />
             </div>
             <div className="mt-3 text-sm text-text-muted">{stat.description}</div>
           </div>
@@ -60,7 +64,7 @@ export function EvidenceCard({ stat, delay }: { stat: EvidenceStat; delay: numbe
         {Icon && <Icon size={16} className="mb-3 text-mint" strokeWidth={2} />}
         {stat.value ? (
           <div className="font-display text-[clamp(28px,3.4vw,40px)] leading-none font-bold">
-            <CountUp value={stat.value} />
+            <CountUp value={displayValue} />
           </div>
         ) : (
           <div className="font-display text-lg font-semibold">{stat.title}</div>

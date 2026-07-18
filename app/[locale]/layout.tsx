@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/layout/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { JsonLd } from "@/components/seo/json-ld";
 import { SiteProvider } from "@/components/i18n/site-provider";
+import { ContributionsProvider } from "@/components/shared/contributions";
 import { getSite } from "@/data/site";
 import {
   SITE_URL,
@@ -118,7 +119,9 @@ export default async function LocaleLayout({
         >
           <TooltipProvider>
             <SiteProvider site={site} locale={locale}>
-              {children}
+              <ContributionsProvider fallback={site.hero.contributionsLastYear}>
+                {children}
+              </ContributionsProvider>
             </SiteProvider>
           </TooltipProvider>
         </ThemeProvider>
