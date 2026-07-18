@@ -17,7 +17,7 @@ export const sitePl: SiteContent = {
       "Programista z Polski · w październiku zaczynam studia IT · otwarty na staże",
     headline: ["Programista frontend,", "tworzę kompletne produkty."],
     paragraph:
-      "Projektuję i tworzę prawdziwe, działające aplikacje — od stron marketingowych po panel administracyjny z bazą danych i logowaniem. Jestem samoukiem, a swój postęp mierzę commitami i wdrożonymi funkcjami, a nie stanowiskami. W październiku zaczynam studia informatyczne.",
+      "Projektuję i tworzę prawdziwe, działające aplikacje - od stron marketingowych po panel administracyjny z bazą danych i logowaniem. Jestem samoukiem, a swój postęp mierzę commitami i wdrożonymi funkcjami, a nie stanowiskami. W październiku zaczynam studia informatyczne.",
     stats: [
       { value: "1,141", label: "commitów rocznie", live: true },
       { value: "6", label: "wdrożonych projektów" },
@@ -47,9 +47,9 @@ export const sitePl: SiteContent = {
     sectionLabel: "01 — O mnie",
     heading: "Liczą się projekty, nie CV.",
     paragraphs: [
-      "Jestem Aleksy — programista z Polski (19 lat). Właśnie skończyłem technikum o profilu programistycznym, gdzie razem z maturą zdałem oba egzaminy zawodowe (INF.03, INF.04).",
-      "Poza szkołą samodzielnie nauczyłem się Reacta, TypeScriptu i Pythona, tworząc rzeczy, z których ludzie naprawdę korzystają: stronę agencji, makietę zamówień dla restauracji oraz — mój najbardziej rozbudowany projekt — panel administracyjny serwisu samochodowego z logowaniem i pełną relacyjną bazą danych.",
-      "W październiku zaczynam studia informatyczne i szukam stażu lub współpracy, którą mógłbym prowadzić równolegle — czegoś, co pozwoli mi dalej tworzyć realne projekty w trakcie studiów.",
+      "Jestem Aleksy - programista z Polski (19 lat). Właśnie skończyłem technikum o profilu programistycznym, gdzie razem z maturą zdałem oba egzaminy zawodowe (INF.03, INF.04) - 100%.",
+      "Poza szkołą samodzielnie nauczyłem się Reacta, TypeScriptu i Pythona, tworząc rzeczy, z których ludzie naprawdę korzystają: stronę agencji, makietę zamówień dla restauracji czy rozbudowane projekty jak panel administracyjny serwisu samochodowego z logowaniem i pełną relacyjną bazą danych.",
+      "W październiku zaczynam studia informatyczne i szukam stażu lub współpracy, którą mógłbym prowadzić równolegle - czegoś, co pozwoli mi dalej tworzyć realne projekty w trakcie studiów.",
     ],
     journeyLabel: "Moja droga do tej pory",
     journey: [
@@ -72,7 +72,9 @@ export const sitePl: SiteContent = {
       {
         title: "Team Poland — MOS 2026",
         description:
-          "Powołany do reprezentowania Polski na Mistrzostwach Świata Microsoft Office Specialist (w USA) w kategorii Excel — dzięki kilku zdanym certyfikatom Excel Expert.",
+          "Reprezentowanie Polski na Mistrzostwach Świata Microsoft Office Specialist (w USA) w kategorii Excel + (kilka zdanych certyfikatów Excel Expert).",
+        interactive: true,
+        interactiveURL: "https://openedg.pl/mos-2026",
       },
       {
         title: "Start studiów — informatyka",
@@ -94,7 +96,13 @@ export const sitePl: SiteContent = {
         title: "Frontend",
         description:
           "Tu spędzam najwięcej czasu — interfejsy, które są przemyślane, a nie domyślne. Każdy projekt na tej stronie powstał na dokładnie tej kombinacji.",
-        badges: ["React", "TypeScript", "Tailwind CSS", "shadcn/ui", "React Bits"],
+        badges: [
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "shadcn/ui",
+          "React Bits",
+        ],
         codeWindow: {
           filename: "stack.ts",
           lines: [
@@ -143,7 +151,10 @@ export const sitePl: SiteContent = {
           "Certyfikowana umiejętność, która stoi za powołaniem do Team Poland MOS 2026 — przy pracy dla klientów swobodnie korzystam też z Photoshopa i Figmy.",
         badges: ["Excel Expert", "Adobe Photoshop", "Figma"],
         highlightBadge: "Excel Expert",
-        stat: { value: "5×", label: "zdanych egzaminów Microsoft Excel Expert" },
+        stat: {
+          value: "5×",
+          label: "zdanych egzaminów Microsoft Excel Expert",
+        },
       },
     ],
   },
@@ -161,7 +172,12 @@ export const sitePl: SiteContent = {
         span: 3,
         hero: true,
       },
-      { id: "math", value: "92%", description: "Wynik matury — matematyka", span: 3 },
+      {
+        id: "math",
+        value: "92%",
+        description: "Wynik matury — matematyka",
+        span: 3,
+      },
       {
         id: "english",
         value: "97%",
@@ -177,7 +193,8 @@ export const sitePl: SiteContent = {
       {
         id: "team-poland",
         title: "Team Poland",
-        description: "Powołanie na Mistrzostwa Świata MOS 2026, kategoria Excel",
+        description:
+          "Powołanie na Mistrzostwa Świata MOS 2026, kategoria Excel",
         span: 2,
       },
       {
@@ -209,16 +226,17 @@ export const sitePl: SiteContent = {
 
   agency: {
     sectionLabel: "04 — Poza kodem",
-    heading: "Prowadzę małą agencję webową — AD.digital.",
+    heading: "Prowadzę małą agencję webową — ADdigital.",
     paragraph:
       "Obok studiów i własnych projektów projektuję i tworzę kompletne strony internetowe dla lokalnych firm w okolicach Szczecina — restauracji, agencji ubezpieczeniowych, serwisów samochodowych czy producentów mebli. Cały proces prowadzę sam, od początku do końca.",
     ctaLabel: "Odwiedź AD.digital",
-    ctaUrl: "https://addigital.vercel.app/",
+    ctaUrl: "https://addigital.pl",
     services: [
       {
         icon: "webdev",
         title: "Projektowanie i budowa stron",
-        description: "Kompletne realizacje od projektu po wdrożenie, na Next.js i Tailwind.",
+        description:
+          "Kompletne realizacje od projektu po wdrożenie, na Next.js i Tailwind.",
       },
       {
         icon: "seo",
@@ -272,7 +290,8 @@ export const sitePl: SiteContent = {
         keyFeatures: [
           {
             title: "Logowanie OAuth oparte na rolach",
-            description: "konta pracowników i administratorów mają różne widoki i uprawnienia.",
+            description:
+              "konta pracowników i administratorów mają różne widoki i uprawnienia.",
           },
           {
             title: "Pełny CRUD pojazdów i rezerwacji",
@@ -332,7 +351,8 @@ export const sitePl: SiteContent = {
         keyFeatures: [
           {
             title: "Animowane hero i system gradientów",
-            description: "zbudowane na Framer Motion, dla płynnych i wydajnych przejść.",
+            description:
+              "zbudowane na Framer Motion, dla płynnych i wydajnych przejść.",
           },
           {
             title: "Galeria portfolio / „Realizacje”",
@@ -413,7 +433,8 @@ export const sitePl: SiteContent = {
         keyFeatures: [
           {
             title: "Lista usług",
-            description: "jasne ceny i zakres każdej usługi, bez ukrytych szczegółów.",
+            description:
+              "jasne ceny i zakres każdej usługi, bez ukrytych szczegółów.",
           },
           {
             title: "Przyciski rezerwacji",
@@ -456,7 +477,8 @@ export const sitePl: SiteContent = {
           },
           {
             title: "Prosta ścieżka do wyceny",
-            description: "krótka droga z każdej sekcji do zapytania o zamówienie na wymiar.",
+            description:
+              "krótka droga z każdej sekcji do zapytania o zamówienie na wymiar.",
           },
           {
             title: "Podział na kategorie",

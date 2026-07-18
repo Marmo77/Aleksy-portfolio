@@ -17,7 +17,14 @@ export function AboutSection() {
             {site.about.heading}
           </h2>
           {site.about.paragraphs.map((p, i) => (
-            <p key={i} className={i === 0 ? "mt-5 leading-relaxed text-text-muted" : "mt-4 leading-relaxed text-text-muted"}>
+            <p
+              key={i}
+              className={
+                i === 0
+                  ? "mt-5 leading-relaxed text-text-muted"
+                  : "mt-4 leading-relaxed text-text-muted"
+              }
+            >
               {p}
             </p>
           ))}

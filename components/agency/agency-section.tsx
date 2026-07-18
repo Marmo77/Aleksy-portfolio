@@ -16,7 +16,7 @@ const REVEAL_DELAYS = [0.06, 0.12, 0.18, 0.24];
 export function AgencySection() {
   const site = useSite();
   const { agency } = site;
-  const [headingBefore] = agency.heading.split("AD.digital.");
+  const [headingBefore] = agency.heading.split("ADdigital.");
 
   return (
     <SpotlightSection
@@ -33,9 +33,11 @@ export function AgencySection() {
           </span>
           <h2 className="font-display mt-3 text-[34px] leading-tight font-bold sm:text-[44px]">
             {headingBefore}
-            <span className="gradient-text">AD.digital.</span>
+            <span className="gradient-text">ADdigital.</span>
           </h2>
-          <p className="mt-5 text-[17px] leading-relaxed text-text-muted">{agency.paragraph}</p>
+          <p className="mt-5 text-[17px] leading-relaxed text-text-muted">
+            {agency.paragraph}
+          </p>
           <div className="mt-8">
             <Button asChild size="cta">
               <Link href={agency.ctaUrl} target="_blank">

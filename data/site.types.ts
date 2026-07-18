@@ -7,6 +7,8 @@ export interface JourneyItem {
   title: string;
   description: string;
   period?: string;
+  interactive?: boolean;
+  interactiveURL?: string;
 }
 
 export interface CodeToken {
